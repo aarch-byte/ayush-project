@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Image from "next/image";
 import { ArrowUpRight, CheckCircle2, Copy, Mail, Send, Sparkles } from "lucide-react";
 import { PERSONAL_DATA } from "@/data/personal";
 
@@ -95,9 +96,20 @@ export function ContactSection() {
 
             {/* Network Presence */}
             <div className="p-6 rounded-2xl border border-universe-border bg-universe-surface/70 space-y-4">
-              <span className="font-mono text-[11px] text-universe-accent uppercase tracking-widest block font-semibold">
-                PROFESSIONAL PROFILE
-              </span>
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[11px] text-universe-accent uppercase tracking-widest block font-semibold">
+                  PROFESSIONAL PROFILE
+                </span>
+                <div className="w-8 h-8 rounded-full overflow-hidden border border-universe-border/60 shrink-0">
+                  <Image
+                    src="/images/ayush-portrait.png"
+                    alt="Ayush"
+                    width={32}
+                    height={32}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
 
               <div className="space-y-2 font-mono text-xs">
                 <a

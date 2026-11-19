@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowUpRight, BookOpen, Sparkles, User } from "lucide-react";
+import Image from "next/image";
+import { ArrowUpRight, BookOpen, Sparkles } from "lucide-react";
 import { PERSONAL_DATA } from "@/data/personal";
 
 export function IntroSection() {
@@ -44,8 +45,15 @@ export function IntroSection() {
 
               {/* Minimal Silhouette & Identity Card */}
               <div className="my-auto flex flex-col items-center justify-center text-center p-8 space-y-4">
-                <div className="w-24 h-24 rounded-full border border-[#101010]/20 flex items-center justify-center bg-[#F2EFE7]">
-                  <User className="w-10 h-10 text-[#77766F]" />
+                <div className="w-24 h-24 rounded-2xl overflow-hidden border border-[#101010]/20 shadow-md">
+                  <Image
+                    src="/images/ayush-portrait.png"
+                    alt="Ayush portrait"
+                    width={96}
+                    height={96}
+                    priority
+                    className="w-full h-full object-cover"
+                  />
                 </div>
                 <div>
                   <span className="font-display font-bold text-2xl tracking-tight text-[#101010]">

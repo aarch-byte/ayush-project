@@ -1,6 +1,7 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Award, BookOpen, Compass, Globe2, ShieldCheck, Sparkles, Terminal, User } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, ArrowUpRight, Award, BookOpen, Compass, Globe2, ShieldCheck, Sparkles, Terminal } from "lucide-react";
 import { PERSONAL_DATA } from "@/data/personal";
 
 export default function AboutPage() {
@@ -87,8 +88,15 @@ export default function AboutPage() {
               <div className="absolute top-0 right-0 w-48 h-48 bg-universe-accent/10 rounded-full blur-3xl pointer-events-none" />
 
               <div className="flex items-center justify-between">
-                <div className="w-20 h-20 rounded-full border border-universe-accent/40 bg-universe-bg flex items-center justify-center">
-                  <User className="w-10 h-10 text-universe-accent" />
+                <div className="relative w-24 h-24 rounded-2xl overflow-hidden border border-universe-border/80 ring-1 ring-universe-accent/20 bg-universe-bg shadow-xl shrink-0 group/avatar">
+                  <Image
+                    src="/images/ayush-portrait.png"
+                    alt="Ayush profile portrait"
+                    width={96}
+                    height={96}
+                    priority
+                    className="w-full h-full object-cover transition-transform duration-300 group-hover/avatar:scale-105"
+                  />
                 </div>
                 <span className="px-3 py-1 rounded-full border border-universe-border bg-universe-surface text-universe-text font-mono text-[10px] uppercase tracking-wider font-semibold">
                   PROFILE

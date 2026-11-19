@@ -2,7 +2,8 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, CheckCircle2, Copy, Mail, MessageSquare, Send, Sparkles, User } from "lucide-react";
+import Image from "next/image";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, Copy, Mail, MessageSquare, Send, Sparkles } from "lucide-react";
 import { PERSONAL_DATA } from "@/data/personal";
 
 export default function ContactPage() {
@@ -105,9 +106,20 @@ export default function ContactPage() {
 
             {/* Professional Profiles */}
             <div className="p-8 rounded-3xl border border-universe-border bg-universe-surface/80 space-y-4">
-              <span className="font-mono text-[11px] text-universe-accent uppercase tracking-widest block font-semibold">
-                PROFESSIONAL PROFILE
-              </span>
+              <div className="flex items-center justify-between">
+                <span className="font-mono text-[11px] text-universe-accent uppercase tracking-widest block font-semibold">
+                  PROFESSIONAL PROFILE
+                </span>
+                <div className="w-10 h-10 rounded-full overflow-hidden border border-universe-border/60 shrink-0">
+                  <Image
+                    src="/images/ayush-portrait.png"
+                    alt="Ayush"
+                    width={40}
+                    height={40}
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+              </div>
 
               <div className="space-y-3 font-mono text-xs">
                 <a

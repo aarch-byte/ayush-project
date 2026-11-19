@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { ArrowLeft, ArrowUpRight, Award, BookOpen, Compass, Flag, GraduationCap, Layers, ShieldCheck, Sparkles } from "lucide-react";
 import { JOURNEY_TIMELINE, TimelineItem } from "@/data/journey";
 
@@ -107,58 +108,134 @@ export default function JourneyPage() {
                 }`}
               />
 
-              {/* Node Header */}
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
-                <div className="flex items-center gap-3">
-                  <span className="p-1.5 rounded-lg bg-universe-bg border border-universe-border">
-                    {getCategoryIcon(item.category)}
-                  </span>
-                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-universe-accent">
-                    {item.category}
-                  </span>
-                  <span className="text-universe-border">•</span>
-                  <span className="font-mono text-xs text-universe-muted">
-                    {item.period}
-                  </span>
+              {item.image ? (
+                /* Asymmetric Editorial Layout for Milestone with Photograph */
+                <div className="grid grid-cols-1 lg:grid-cols-12 gap-6 lg:gap-8 items-start">
+                  {/* Left Editorial Content */}
+                  <div className="lg:col-span-7 flex flex-col justify-between h-full space-y-4">
+                    <div>
+                      {/* Node Header */}
+                      <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                        <div className="flex items-center gap-3">
+                          <span className="p-1.5 rounded-lg bg-universe-bg border border-universe-border">
+                            {getCategoryIcon(item.category)}
+                          </span>
+                          <span className="font-mono text-xs font-bold uppercase tracking-wider text-universe-accent">
+                            {item.category}
+                          </span>
+                          <span className="text-universe-border">•</span>
+                          <span className="font-mono text-xs text-universe-muted">
+                            {item.period}
+                          </span>
+                        </div>
+
+                        <div className="font-mono text-xs text-universe-muted px-2.5 py-1 rounded bg-universe-bg border border-universe-border/50">
+                          {item.institutionOrContext}
+                        </div>
+                      </div>
+
+                      {/* Title & Narrative */}
+                      <h2 className="font-display font-bold text-2xl sm:text-3xl text-universe-text tracking-tight uppercase group-hover:text-universe-accent transition-colors">
+                        {item.title}
+                      </h2>
+
+                      <p className="mt-3 text-sm sm:text-base text-universe-text/80 leading-relaxed font-sans">
+                        {item.description}
+                      </p>
+                    </div>
+
+                    {/* Tags */}
+                    <div className="pt-4 border-t border-universe-border/40 flex flex-wrap gap-2">
+                      {item.tags.map((tag, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="px-2.5 py-0.5 rounded-full border border-universe-border bg-universe-bg/60 text-[11px] font-mono text-universe-muted"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
+                  </div>
+
+                  {/* Right Photograph Showcase */}
+                  <div className="lg:col-span-5 w-full max-w-sm mx-auto lg:max-w-none">
+                    <div className="relative rounded-2xl overflow-hidden border border-universe-border/80 bg-universe-bg shadow-xl group/photo transition-all duration-300 hover:border-universe-accent/50">
+                      <div className="relative aspect-[3/4] w-full overflow-hidden bg-universe-surface">
+                        <Image
+                          src={item.image.src}
+                          alt={item.image.alt}
+                          fill
+                          sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 380px"
+                          priority
+                          className="object-cover object-center transition-transform duration-500 group-hover/photo:scale-[1.02]"
+                        />
+                      </div>
+                      {item.image.caption && (
+                        <div className="p-3 border-t border-universe-border/60 bg-universe-surface/80 flex items-center justify-between font-mono text-[10px] text-universe-muted">
+                          <span className="truncate">{item.image.caption}</span>
+                          <span className="text-universe-accent uppercase shrink-0 ml-2">CAMPUS</span>
+                        </div>
+                      )}
+                    </div>
+                  </div>
                 </div>
+              ) : (
+                /* Standard Milestone Layout */
+                <>
+                  {/* Node Header */}
+                  <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
+                    <div className="flex items-center gap-3">
+                      <span className="p-1.5 rounded-lg bg-universe-bg border border-universe-border">
+                        {getCategoryIcon(item.category)}
+                      </span>
+                      <span className="font-mono text-xs font-bold uppercase tracking-wider text-universe-accent">
+                        {item.category}
+                      </span>
+                      <span className="text-universe-border">•</span>
+                      <span className="font-mono text-xs text-universe-muted">
+                        {item.period}
+                      </span>
+                    </div>
 
-                <div className="font-mono text-xs text-universe-muted px-2.5 py-1 rounded bg-universe-bg border border-universe-border/50">
-                  {item.institutionOrContext}
-                </div>
-              </div>
+                    <div className="font-mono text-xs text-universe-muted px-2.5 py-1 rounded bg-universe-bg border border-universe-border/50">
+                      {item.institutionOrContext}
+                    </div>
+                  </div>
 
-              {/* Title & Narrative */}
-              <h2 className="font-display font-bold text-2xl sm:text-3xl text-universe-text tracking-tight uppercase group-hover:text-universe-accent transition-colors">
-                {item.title}
-              </h2>
+                  {/* Title & Narrative */}
+                  <h2 className="font-display font-bold text-2xl sm:text-3xl text-universe-text tracking-tight uppercase group-hover:text-universe-accent transition-colors">
+                    {item.title}
+                  </h2>
 
-              <p className="mt-3 text-sm sm:text-base text-universe-text/80 leading-relaxed font-sans max-w-3xl">
-                {item.description}
-              </p>
+                  <p className="mt-3 text-sm sm:text-base text-universe-text/80 leading-relaxed font-sans max-w-3xl">
+                    {item.description}
+                  </p>
 
-              {/* Tags & Action Link */}
-              <div className="mt-5 pt-4 border-t border-universe-border/40 flex flex-wrap items-center justify-between gap-4">
-                <div className="flex flex-wrap gap-2">
-                  {item.tags.map((tag, tIdx) => (
-                    <span
-                      key={tIdx}
-                      className="px-2.5 py-0.5 rounded-full border border-universe-border bg-universe-bg/60 text-[11px] font-mono text-universe-muted"
-                    >
-                      #{tag}
-                    </span>
-                  ))}
-                </div>
+                  {/* Tags & Action Link */}
+                  <div className="mt-5 pt-4 border-t border-universe-border/40 flex flex-wrap items-center justify-between gap-4">
+                    <div className="flex flex-wrap gap-2">
+                      {item.tags.map((tag, tIdx) => (
+                        <span
+                          key={tIdx}
+                          className="px-2.5 py-0.5 rounded-full border border-universe-border bg-universe-bg/60 text-[11px] font-mono text-universe-muted"
+                        >
+                          #{tag}
+                        </span>
+                      ))}
+                    </div>
 
-                {item.category === "COMPETITION" && (
-                  <Link
-                    href="/work/mitti-compass"
-                    className="inline-flex items-center gap-1.5 font-mono text-xs text-universe-accent hover:underline"
-                  >
-                    <span>STUDY MITTI COMPASS</span>
-                    <ArrowUpRight className="w-3.5 h-3.5" />
-                  </Link>
-                )}
-              </div>
+                    {item.category === "COMPETITION" && (
+                      <Link
+                        href="/work/mitti-compass"
+                        className="inline-flex items-center gap-1.5 font-mono text-xs text-universe-accent hover:underline"
+                      >
+                        <span>STUDY MITTI COMPASS</span>
+                        <ArrowUpRight className="w-3.5 h-3.5" />
+                      </Link>
+                    )}
+                  </div>
+                </>
+              )}
             </div>
           ))}
         </div>

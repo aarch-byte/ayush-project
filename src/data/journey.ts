@@ -7,6 +7,11 @@ export interface TimelineItem {
   description: string;
   highlight?: boolean;
   tags: string[];
+  image?: {
+    src: string;
+    alt: string;
+    caption?: string;
+  };
 }
 
 export const JOURNEY_TIMELINE: TimelineItem[] = [
@@ -20,6 +25,11 @@ export const JOURNEY_TIMELINE: TimelineItem[] = [
       "Pursuing foundational studies in digital platforms, platform economics, business model innovation, and entrepreneurial strategy at IIM Bangalore.",
     highlight: true,
     tags: ["Digital Business", "Entrepreneurship", "Strategy"],
+    image: {
+      src: "/images/ayush-iim-bangalore.jpg",
+      alt: "Ayush standing in front of the Indian Institute of Management Bangalore signage.",
+      caption: "Indian Institute of Management Bangalore",
+    },
   },
   {
     year: "PRESENT",

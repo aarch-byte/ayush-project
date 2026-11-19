@@ -39,7 +39,7 @@ export const JOURNEY_TIMELINE: TimelineItem[] = [
     category: "COMPETITION",
     institutionOrContext: "IIM Bangalore",
     description:
-      "Reached the national Top 10 and participated in the offline final round at IIM Bangalore. Contributed to marketing and finance aspects, developing 'MITTI Compass' — an expansion simulator concept balancing disability employment with strategic planning.",
+      "Reached the Top 10 and participated in the offline final round at IIM Bangalore. Contributed to marketing and finance aspects, developing 'MITTI Compass' — a conceptual financial and expansion-planning simulator for social enterprise scaling.",
     highlight: true,
     tags: ["Top 10 Finalist", "Offline Finals", "IIM Bangalore", "Social Enterprise"],
   },
@@ -50,9 +50,9 @@ export const JOURNEY_TIMELINE: TimelineItem[] = [
     category: "LEADERSHIP",
     institutionOrContext: "Senior Secondary School",
     description:
-      "Served as House Captain during Class XII, coordinating house participation across school sports tournaments, cultural activities, and student council initiatives.",
+      "Served as School House Captain during Class XII in 2025.",
     highlight: false,
-    tags: ["Student Leadership", "House Captain", "Coordination"],
+    tags: ["Student Leadership", "House Captain", "Class XII"],
   },
   {
     year: "2025",
@@ -61,9 +61,9 @@ export const JOURNEY_TIMELINE: TimelineItem[] = [
     category: "COMPETITION",
     institutionOrContext: "School Commerce Society",
     description:
-      "Achieved second position in a competitive intra-school business quiz testing macroeconomic awareness, financial concepts, and corporate history.",
+      "Achieved second position in a Class XII intra-school business quiz in 2025.",
     highlight: false,
-    tags: ["2nd Position", "Business Quiz", "Macroeconomics"],
+    tags: ["2nd Position", "Business Quiz", "Class XII"],
   },
   {
     year: "2024 — PRESENT",
@@ -72,7 +72,7 @@ export const JOURNEY_TIMELINE: TimelineItem[] = [
     category: "TEACHING",
     institutionOrContext: "Independent Teaching",
     description:
-      "Independently tutoring commerce students in Accountancy, explaining fundamental ledger accounting, financial statement preparation, and core commercial concepts.",
+      "Independently tutoring high school students in Accountancy, explaining fundamental ledger accounting and financial statement concepts.",
     highlight: false,
     tags: ["Accountancy", "Independent Teaching", "Financial Concepts"],
   },
@@ -83,7 +83,7 @@ export const JOURNEY_TIMELINE: TimelineItem[] = [
     category: "LEADERSHIP",
     institutionOrContext: "NCC Directorate",
     description:
-      "Completed three years of cadet training from Class VIII to Class X, earning the 'A' Certificate with Alpha Grade through drill discipline, tactical exercises, and field training.",
+      "Completed NCC cadet training from Class VIII to Class X (completed in 2023), receiving the 'A' Certificate with Alpha Grade.",
     highlight: false,
     tags: ["Alpha Grade", "NCC A Certificate", "Discipline"],
   },
@@ -94,8 +94,8 @@ export const JOURNEY_TIMELINE: TimelineItem[] = [
     category: "DIPLOMACY",
     institutionOrContext: "Model UN Conferences",
     description:
-      "Participated as a delegate in two Model United Nations conferences, representing assigned countries in committee deliberations, resolution drafting, and collaborative negotiation.",
+      "Participated as a delegate in two Model United Nations conferences.",
     highlight: false,
-    tags: ["Delegate", "Two Conferences", "Negotiation"],
+    tags: ["Delegate", "Two Conferences", "Model UN"],
   },
 ];

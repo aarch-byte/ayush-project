@@ -27,10 +27,10 @@ export function ThinkingSection() {
 
           <div className="max-w-md space-y-2">
             <p className="font-mono text-xs sm:text-sm text-universe-muted leading-relaxed">
-              A working journal of business observations, platform unit economics, quantitative anomalies, and personal learnings.
+              Sample outlines and working notes on business observations, platform unit economics, and quantitative questions.
             </p>
-            <span className="inline-block px-2.5 py-0.5 rounded border border-universe-accent/30 bg-universe-accent/5 font-mono text-[10px] text-universe-accent uppercase tracking-wider">
-              STRUCTURE INITIALIZED // SAMPLE WORKING NOTES
+            <span className="inline-block px-2.5 py-0.5 rounded border border-universe-border bg-universe-surface font-mono text-[10px] text-universe-muted uppercase tracking-wider">
+              SAMPLE WORKING NOTES // FUTURE EXPLORATION
             </span>
           </div>
         </div>
@@ -89,7 +89,7 @@ export function ThinkingSection() {
               <div className="pt-2 border-t border-universe-border/40 flex items-center justify-between font-mono text-xs text-universe-muted">
                 <span className="text-[11px]">NOTE #{entry.id}</span>
                 <span className="group-hover:text-universe-accent transition-colors flex items-center gap-1">
-                  <span>DISCUSS ESSAY</span>
+                  <span>DISCUSS TOPIC</span>
                   <ArrowUpRight className="w-3.5 h-3.5 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </span>
               </div>
@@ -104,7 +104,7 @@ export function ThinkingSection() {
             className="inline-flex items-center gap-2 px-8 py-4 rounded-full border border-universe-border bg-universe-surface hover:border-universe-accent text-universe-text font-mono text-xs tracking-wider uppercase transition-all"
           >
             <BookOpen className="w-4 h-4 text-universe-accent" />
-            <span>OPEN ESSAYS & THINKING ARCHIVE</span>
+            <span>OPEN WORKING NOTES ARCHIVE</span>
             <ArrowUpRight className="w-4 h-4 text-universe-accent" />
           </Link>
         </div>

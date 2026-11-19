@@ -22,7 +22,7 @@ export interface CaseStudy {
   }[];
   learnings: string[];
   featured: boolean;
-  status: "Conceptual Simulator & Framework" | "Exploratory Quantitative Model";
+  status: "Conceptual Simulator" | "Exploratory Concept";
 }
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -30,117 +30,117 @@ export const CASE_STUDIES: CaseStudy[] = [
     id: "mitti-compass",
     slug: "mitti-compass",
     title: "MITTI COMPASS",
-    subtitle: "Interactive Financial & Expansion-Planning Simulator Concept for MITTI Café",
+    subtitle: "Conceptual Financial & Expansion-Planning Simulator Developed for MITTI Café",
     category: "Financial Planning & Expansion Strategy",
     badge: "Top 10 Finalist — MITTI Café Case Competition",
     year: "November 2026",
     context:
-      "Developed in the context of the MITTI Café Case Competition focusing on a social enterprise that employs persons with disabilities. The team reached the national Top 10 and participated in the offline final round at IIM Bangalore in November 2026.",
+      "A conceptual financial and expansion-planning simulator developed in the MITTI Café case competition focusing on a social enterprise that employs persons with disabilities. The team reached the Top 10 and participated in the offline final round at IIM Bangalore in November 2026.",
     role: "Marketing & Finance Strategy, Expansion Simulator Design",
     recognition: "Top 10 Finalist | Offline Final-Round Participant, IIM Bangalore",
     problem:
-      "MITTI Café operates on a dual mandate: providing dignified employment to persons with disabilities while maintaining financial viability across high-cost urban environments. The expansion dilemma lies in evaluating new locations without overextending capital reserves or compromising specialized training workflows.",
+      "MITTI Café balances a dual mission: employing persons with disabilities while managing costs in competitive urban locations. The strategic challenge was formulating an expansion model to evaluate potential sites and plan financial sustainability without overextending resources.",
     approach: [
-      "Geospatial location mapping assessing demographic clusters, tech-park densities, and transit accessibility.",
-      "Developing a dynamic scenario simulator contrasting conservative, moderate, and aggressive customer throughput assumptions.",
-      "Structuring the 'Spokes vs. Lighthouses' operational model to balance flagships against lower-overhead institutional kiosks.",
-      "Modeling funding considerations, grant utilization, and corporate sponsorship arrangements to protect cash flow reserves.",
+      "Conceptual geospatial location mapping to evaluate potential store coordinates.",
+      "Developing financial planning scenarios under differing footfall assumptions.",
+      "Structuring a conceptual 'Spokes vs. Lighthouses' operating model.",
+      "Evaluating funding considerations and corporate partnership opportunities.",
     ],
     solution:
-      "An interactive financial planning and expansion simulator concept that evaluates potential store locations, projects capital expenditure against expected footfalls, and compares institutional corporate hubs against high-street units before capital is deployed.",
+      "A conceptual financial planning and expansion-decision simulator proposing location evaluation criteria, scenario planning, and capital considerations for social enterprise scaling.",
     pillars: [
       {
         label: "Spokes vs. Lighthouses Model",
         description:
-          "Proposes centralized high-visibility 'Lighthouses' supported by agile, low-overhead corporate 'Spokes' to balance brand presence with lean operations.",
+          "A proposed conceptual structure pairing flagship locations with lower-overhead corporate kiosks to balance visibility with cost control.",
       },
       {
         label: "Geospatial Location Mapping",
         description:
-          "Evaluates potential site coordinates based on commercial density, transit convenience for disabled staff, and corporate partner proximity.",
+          "Conceptual criteria for assessing location density, accessibility for staff with disabilities, and corporate proximity.",
       },
       {
         label: "Scenario & Funding Planning",
         description:
-          "Simulates cash-flow runways under varying capital structures, including CSR partnerships, institutional leases, and grant-aided expansion.",
+          "Scenario-based projections considering capital requirements, corporate partnerships, and operational sustainability.",
       },
     ],
     financialFramework: [
       {
         label: "Spokes vs. Lighthouses Model",
         description:
-          "Proposes centralized high-visibility 'Lighthouses' supported by agile, low-overhead corporate 'Spokes' to balance brand presence with lean operations.",
+          "A proposed conceptual structure pairing flagship locations with lower-overhead corporate kiosks to balance visibility with cost control.",
       },
       {
         label: "Geospatial Location Mapping",
         description:
-          "Evaluates potential site coordinates based on commercial density, transit convenience for disabled staff, and corporate partner proximity.",
+          "Conceptual criteria for assessing location density, accessibility for staff with disabilities, and corporate proximity.",
       },
       {
         label: "Scenario & Funding Planning",
         description:
-          "Simulates cash-flow runways under varying capital structures, including CSR partnerships, institutional leases, and grant-aided expansion.",
+          "Scenario-based projections considering capital requirements, corporate partnerships, and operational sustainability.",
       },
     ],
     learnings: [
-      "Mission-driven social enterprises require even stricter financial scrutiny than conventional businesses, because financial viability protects the humanitarian mission.",
-      "Defending strategic models in-person at IIM Bangalore before an experienced jury reinforced the necessity of stress-testing operational assumptions under conservative scenarios.",
+      "Social enterprises benefit from careful financial planning and unit-level scrutiny to protect their inclusive mission.",
+      "Presenting in the offline final round at IIM Bangalore provided valuable experience in evaluating assumptions under realistic business constraints.",
     ],
     featured: true,
-    status: "Conceptual Simulator & Framework",
+    status: "Conceptual Simulator",
   },
   {
     id: "retail-analytics-model",
     slug: "retail-analytics-model",
     title: "OMNICHANNEL UNIT ECONOMICS SIMULATOR",
-    subtitle: "Exploratory Working-Capital & Inventory Flow Concept",
+    subtitle: "Exploratory Thought Model on Working Capital & Inventory Dynamics",
     category: "Data Analytics & Quantitative Finance",
-    badge: "Independent Exploratory Model",
-    year: "2025",
+    badge: "Exploratory Concept (Not Built)",
+    year: "Conceptual Exploration",
     context:
-      "An exploratory quantitative project developed to analyze working capital cycles, contribution margins, and inventory turnover across hybrid commerce scenarios.",
-    role: "Quantitative Scenario Modeling",
-    recognition: "Academic & Personal Exploration",
+      "An exploratory concept and thought model examining working capital cycles, contribution margins, and inventory turnover across hybrid commerce scenarios.",
+    role: "Conceptual Modeling & Scenario Analysis",
+    recognition: "Exploratory Academic Concept",
     problem:
-      "Growing consumer brands often generate top-line expansion while encountering severe working capital strain due to inventory holding times and return logistics.",
+      "How inventory carrying costs and return logistics can impact operating cash flows in multichannel retail environments.",
     approach: [
-      "Simulated inventory lead times and buffer levels across multi-channel distribution paths.",
-      "Constructed sensitivity tables evaluating contribution margins after factoring fulfillment and payment processing costs.",
+      "Conceptual modeling of inventory turnover intervals.",
+      "Hypothetical sensitivity analysis across variable fulfillment channel costs.",
     ],
     solution:
-      "A conceptual analytical model designed to visualize how variations in inventory velocity and return rates impact operating cash flows.",
+      "A conceptual framework outlining how data analysis can help visualize cash flow impacts from inventory lag and return rates.",
     pillars: [
       {
-        label: "Inventory Velocity Analysis",
-        description: "Assessing carrying costs across variable SKU turnover rates.",
+        label: "Inventory Flow Concept",
+        description: "Conceptual analysis of holding costs across turnover rates.",
       },
       {
-        label: "Margin Sensitivity Modeling",
-        description: "Evaluating net contribution margins across differing fulfillment channel costs.",
+        label: "Margin Sensitivity",
+        description: "Hypothetical analysis of fulfillment costs across channels.",
       },
       {
-        label: "Scenario Testing Dashboard",
-        description: "Simulating cash-flow impact under delayed receivable cycles.",
+        label: "Scenario Exploration",
+        description: "Exploring theoretical impacts on working capital cycles.",
       },
     ],
     financialFramework: [
       {
-        label: "Inventory Velocity Analysis",
-        description: "Assessing carrying costs across variable SKU turnover rates.",
+        label: "Inventory Flow Concept",
+        description: "Conceptual analysis of holding costs across turnover rates.",
       },
       {
-        label: "Margin Sensitivity Modeling",
-        description: "Evaluating net contribution margins across differing fulfillment channel costs.",
+        label: "Margin Sensitivity",
+        description: "Hypothetical analysis of fulfillment costs across channels.",
       },
       {
-        label: "Scenario Testing Dashboard",
-        description: "Simulating cash-flow impact under delayed receivable cycles.",
+        label: "Scenario Exploration",
+        description: "Exploring theoretical impacts on working capital cycles.",
       },
     ],
     learnings: [
-      "Data models are only as valuable as the operational realities they reflect; theoretical math must align with physical supply chain constraints.",
+      "Theoretical financial models must be grounded in real-world supply chain and operating conditions.",
     ],
     featured: false,
-    status: "Exploratory Quantitative Model",
+    status: "Exploratory Concept",
   },
 ];

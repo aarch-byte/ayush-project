@@ -60,7 +60,7 @@ export function BeyondSection() {
       category: "CULTURAL DISCOVERY",
       discipline: "Observation & Local Markets",
       narrative:
-        "Exploring regional commercial centers and observing how local markets operate. Conversant across English and Hindi (working/academic), Punjabi (native/conversational), and Urdu (foundational/conversational).",
+        "Exploring regional commercial centers and observing how local markets operate. Languages: English, Hindi, Punjabi, and Urdu.",
       coordinates: "INDIAN MARKETS",
       icon: <Compass className="w-5 h-5 text-emerald-400" />,
       aspect: "col-span-1 md:col-span-12",
@@ -142,10 +142,10 @@ export function BeyondSection() {
                 </p>
               </div>
 
-              {/* Bottom Authentic Marker */}
+              {/* Bottom Marker */}
               <div className="mt-6 pt-4 border-t border-universe-border/40 flex items-center justify-between font-mono text-[11px] text-universe-muted">
                 <span>PERSONAL PURSUITS</span>
-                <span className="text-universe-accent">AUTHENTIC</span>
+                <span className="text-universe-accent">INTERESTS</span>
               </div>
             </div>
           ))}

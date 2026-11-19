@@ -90,8 +90,8 @@ export default function AboutPage() {
                 <div className="w-20 h-20 rounded-full border border-universe-accent/40 bg-universe-bg flex items-center justify-center">
                   <User className="w-10 h-10 text-universe-accent" />
                 </div>
-                <span className="px-3 py-1 rounded-full border border-universe-accent/30 bg-universe-accent/10 font-mono text-[10px] text-universe-accent uppercase tracking-wider font-semibold">
-                  VERIFIED PROFILE
+                <span className="px-3 py-1 rounded-full border border-universe-border bg-universe-surface text-universe-text font-mono text-[10px] uppercase tracking-wider font-semibold">
+                  PROFILE
                 </span>
               </div>
 
@@ -141,24 +141,23 @@ export default function AboutPage() {
               </div>
             </div>
 
-            {/* Linguistic Proficiency Box */}
+            {/* Languages Box */}
             <div className="p-6 rounded-2xl border border-universe-border bg-universe-surface/60 space-y-3 font-mono text-xs">
               <span className="text-universe-accent uppercase tracking-widest block text-[11px] flex items-center gap-2 font-semibold">
                 <Globe2 className="w-4 h-4" />
                 <span>LANGUAGES</span>
               </span>
               <p className="text-universe-muted text-[11px] leading-relaxed">
-                Accurate perspective across regional and national languages:
+                Languages:
               </p>
-              <div className="space-y-2 pt-1 font-mono text-xs">
+              <div className="flex flex-wrap gap-2 pt-1 font-mono text-xs">
                 {PERSONAL_DATA.languages.map((lang, idx) => (
-                  <div
+                  <span
                     key={idx}
-                    className="p-2.5 rounded-xl border border-universe-border/60 bg-universe-bg flex items-center justify-between"
+                    className="px-3 py-1.5 rounded-full border border-universe-border/60 bg-universe-bg text-universe-text text-[11px]"
                   >
-                    <span className="text-universe-text font-semibold">{lang.name}</span>
-                    <span className="text-universe-muted text-[11px]">{lang.level}</span>
-                  </div>
+                    {lang}
+                  </span>
                 ))}
               </div>
             </div>
@@ -240,10 +239,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Section 3: Verified Areas of Interest */}
+        {/* Section 3: Areas of Interest */}
         <section className="pt-12 border-t border-universe-border/60 space-y-6">
           <span className="font-mono text-xs text-universe-accent uppercase tracking-widest block">
-            // AREAS OF ONGOING INTEREST
+            // AREAS OF INTEREST
           </span>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">

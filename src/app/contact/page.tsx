@@ -147,12 +147,23 @@ export default function ContactPage() {
                   <p className="text-xs text-universe-muted max-w-sm mx-auto leading-relaxed">
                     Your transmission has been forwarded to your mail client addressed to {PERSONAL_DATA.contact.email}.
                   </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="inline-block mt-4 text-xs text-universe-accent hover:underline uppercase"
-                  >
-                    Send another message
-                  </button>
+                  <div>
+                    <a
+                      href={`mailto:${PERSONAL_DATA.contact.email}?subject=${encodeURIComponent(`[Website Inquiry] ${formState.topic} - from ${formState.name || "Visitor"}`)}&body=${encodeURIComponent(`Name: ${formState.name}\nEmail: ${formState.email}\nTopic: ${formState.topic}\n\nMessage:\n${formState.message}`)}`}
+                      className="inline-flex items-center gap-1.5 px-5 py-2.5 rounded-xl bg-universe-accent text-universe-bg font-mono text-xs font-bold uppercase hover:bg-white transition-all my-2"
+                    >
+                      <span>Click to open email client</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                  <div>
+                    <button
+                      onClick={() => setSubmitted(false)}
+                      className="inline-block mt-3 text-xs text-universe-accent hover:underline uppercase"
+                    >
+                      Send another message
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-6">

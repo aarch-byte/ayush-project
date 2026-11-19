@@ -120,7 +120,7 @@ export default function WorkPage() {
                   href={project.featured ? `/work/${project.slug}` : "/contact"}
                   className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-universe-accent text-universe-bg font-bold tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(216,255,62,0.2)]"
                 >
-                  <span>{project.featured ? "OPEN DEEP-DIVE CASE STUDY" : "REQUEST RESEARCH BRIEF"}</span>
+                  <span>{project.featured ? "OPEN CASE STUDY" : "DISCUSS THIS CONCEPT"}</span>
                   <ArrowUpRight className="w-4 h-4" />
                 </Link>
               </div>

@@ -23,9 +23,9 @@ export default function MittiCompassPage() {
       context: "Designed an interactive financial planning and expansion simulator concept for location-based decision support.",
     },
     {
-      metric: "VERIFIED",
-      label: "Accurate Representation",
-      context: "Clearly presented as a conceptual proposal and competitive simulation, without exaggerated or commercial claims.",
+      metric: "CASE STUDY",
+      label: "Competition Entry",
+      context: "Presented as a conceptual proposal and simulation developed for the national case competition finals.",
     },
   ];
 
@@ -243,11 +243,11 @@ export default function MittiCompassPage() {
           </div>
         </section>
 
-        {/* SECTION 5: Scope & Verification Statement */}
+        {/* SECTION 5: Scope & Documentation Note */}
         <div className="p-6 rounded-2xl border border-universe-border/60 bg-universe-bg font-mono text-xs text-universe-muted flex items-start gap-4">
           <CheckCircle2 className="w-4 h-4 text-universe-accent shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            <strong className="text-universe-text">Authentic Documentation Note:</strong> This case study reflects a conceptual strategy and decision-support simulator prototype developed for the MITTI Café Case Competition (Top 10 Finalist | Offline Final-Round Participant at IIM Bangalore, November 2026). It represents academic and competitive strategic analysis and does not claim commercial adoption or measured operational metrics.
+            <strong className="text-universe-text">Documentation Note:</strong> This case study reflects a conceptual strategy and decision-support simulation framework developed for the MITTI Café Case Competition (Top 10 Finalist | Offline Final-Round Participant at IIM Bangalore, November 2026). It represents academic and competitive strategic analysis and does not claim commercial adoption or measured operational metrics.
           </p>
         </div>
 

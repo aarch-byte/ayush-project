@@ -42,7 +42,7 @@ export default function ThinkingPage() {
         <header className="border-b border-universe-border/60 pb-12 space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>THE INTELLECTUAL WORKSPACE // ESSAYS & WORKING NOTES</span>
+            <span>THE INTELLECTUAL WORKSPACE // TOPICS & WORKING NOTES</span>
           </div>
 
           <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-8xl uppercase tracking-tightest leading-[0.92]">
@@ -76,13 +76,13 @@ export default function ThinkingPage() {
           </div>
         </header>
 
-        {/* Integrity Notice Banner */}
-        <div className="p-4 rounded-2xl border border-universe-accent/30 bg-universe-accent/5 font-mono text-xs text-universe-muted flex items-center justify-between gap-4">
-          <span className="text-universe-accent uppercase font-semibold">
-            EDITORIAL TRANSPARENCY:
+        {/* Working Notes Notice */}
+        <div className="p-4 rounded-2xl border border-universe-border bg-universe-surface/70 font-mono text-xs text-universe-muted flex flex-col sm:flex-row sm:items-center justify-between gap-2 sm:gap-4">
+          <span className="text-universe-accent uppercase font-semibold shrink-0">
+            NOTE // WORKING EXPLORATIONS:
           </span>
           <span className="text-[11px]">
-            The following represent working exploratory notes and hypotheses authored by Ayush, not commercial sponsored articles.
+            The topics below represent sample outlines and working notes for future exploration, rather than published essays.
           </span>
         </div>
 

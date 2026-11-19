@@ -133,14 +133,25 @@ export function ContactSection() {
                     Email Client Opened
                   </h3>
                   <p className="text-xs text-universe-muted max-w-sm mx-auto leading-relaxed">
-                    Your message has been pre-formatted for direct dispatch to {PERSONAL_DATA.contact.email}. You can also write directly anytime.
+                    Your message has been pre-formatted for direct dispatch to {PERSONAL_DATA.contact.email}.
                   </p>
-                  <button
-                    onClick={() => setSubmitted(false)}
-                    className="inline-block mt-4 text-xs text-universe-accent hover:underline uppercase"
-                  >
-                    Send another message
-                  </button>
+                  <div>
+                    <a
+                      href={`mailto:${PERSONAL_DATA.contact.email}?subject=${encodeURIComponent(`[Website Inquiry] ${formState.topic} - from ${formState.name || "Visitor"}`)}&body=${encodeURIComponent(`Name: ${formState.name}\nEmail: ${formState.email}\nTopic: ${formState.topic}\n\nMessage:\n${formState.message}`)}`}
+                      className="inline-flex items-center gap-1.5 px-4 py-2 rounded-lg bg-universe-accent text-universe-bg font-mono text-xs font-bold uppercase hover:bg-white transition-all"
+                    >
+                      <span>Click to open email client</span>
+                      <ArrowUpRight className="w-3.5 h-3.5" />
+                    </a>
+                  </div>
+                  <div>
+                    <button
+                      onClick={() => setSubmitted(false)}
+                      className="inline-block mt-2 text-xs text-universe-accent hover:underline uppercase"
+                    >
+                      Send another message
+                    </button>
+                  </div>
                 </div>
               ) : (
                 <form onSubmit={handleSubmit} className="space-y-5">

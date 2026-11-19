@@ -31,7 +31,7 @@ export const PERSONAL_DATA = {
       category: "Strategy & Social Enterprise",
       period: "November 2026",
       description:
-        "Contributed to marketing and finance-related aspects of 'MITTI Compass' — a strategic financial and expansion-planning simulator concept for MITTI Café, balancing inclusive employment with location-based decision support. Advanced to the offline national Top 10 finals at IIM Bangalore.",
+        "Contributed to marketing and finance aspects of 'MITTI Compass' — a conceptual financial and expansion-planning simulator developed in the MITTI Café case competition. Reached the Top 10 and participated in the offline final round at IIM Bangalore.",
     },
     {
       title: "National Cadet Corps (NCC)",
@@ -39,15 +39,15 @@ export const PERSONAL_DATA = {
       category: "Discipline & Leadership",
       period: "Class VIII – Class X (Completed 2023)",
       description:
-        "Completed three years of cadet training demonstrating physical endurance, tactical coordination, and command discipline, graduating with the highest Alpha grade.",
+        "Completed NCC training from Class VIII to Class X (completed in 2023), receiving the 'A' Certificate with Alpha Grade.",
     },
     {
       title: "School House Leadership",
       role: "House Captain",
-      category: "Student Governance",
+      category: "Student Leadership",
       period: "Class XII (2025)",
       description:
-        "Served as House Captain during Class XII, coordinating house contingents across school competitions, sports events, and student initiatives.",
+        "Served as School House Captain during Class XII in 2025.",
     },
     {
       title: "Intra-School Business Quiz",
@@ -55,15 +55,15 @@ export const PERSONAL_DATA = {
       category: "Business Knowledge",
       period: "Class XII (2025)",
       description:
-        "Achieved second position in a Class XII intra-school business quiz evaluating macroeconomics, business history, and market developments.",
+        "Achieved second position in a Class XII intra-school business quiz in 2025.",
     },
     {
       title: "Model United Nations",
       role: "Delegate (Two Conferences)",
-      category: "Diplomacy & Public Policy",
+      category: "Public Speaking & Debate",
       period: "High School",
       description:
-        "Participated as a delegate across two Model United Nations conferences, engaging in committee debates, resolution drafting, and multilateral negotiations.",
+        "Participated as a delegate in two Model United Nations conferences.",
     },
   ],
 
@@ -72,7 +72,7 @@ export const PERSONAL_DATA = {
       title: "Independent Accountancy Tutoring",
       role: "Independent Tutor",
       description:
-        "Independently teaching Accountancy tuition, breaking down financial statements, ledger entries, and accounting principles for high school commerce students.",
+        "Independently teaching Accountancy tuition for high school commerce students.",
     },
   ],
 
@@ -87,12 +87,7 @@ export const PERSONAL_DATA = {
     "Reading and understanding new concepts",
   ],
 
-  languages: [
-    { name: "English", level: "Working & Academic Proficiency" },
-    { name: "Hindi", level: "Fluent & Working Proficiency" },
-    { name: "Punjabi", level: "Native / Conversational Fluency" },
-    { name: "Urdu", level: "Foundational & Conversational Understanding" },
-  ],
+  languages: ["English", "Hindi", "Punjabi", "Urdu"],
 
   contact: {
     email: "ayush23021@gmail.com",

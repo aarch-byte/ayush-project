@@ -73,7 +73,7 @@ export default function BeyondPage() {
       icon: <Compass className="w-5 h-5 text-emerald-400" />,
       quote: "Observing local commerce in person grounds theoretical economic concepts.",
       narrative:
-        "Traveling across different regions in India and observing how local markets and small enterprises operate. With working proficiency in English and Hindi, native conversational fluency in Punjabi, and foundational understanding of Urdu, engaging with diverse communities offers authentic commercial perspective.",
+        "Traveling across different regions in India and observing how local markets and small enterprises operate. Speaking English, Hindi, Punjabi, and Urdu, engaging with diverse communities offers ground-level commercial perspective.",
       takeaways: [
         "First-hand observation of local merchant cash-flow dynamics",
         "Multilingual communication bridging regional contexts",

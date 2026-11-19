@@ -62,8 +62,8 @@ export function IntroSection() {
 
               {/* Bottom Frame Technical Note */}
               <div className="font-mono text-[10px] text-[#77766F] border-t border-[#101010]/10 pt-3 flex items-center justify-between">
-                <span>AUTHENTIC PROFILE</span>
-                <span>VERIFIED RECORD</span>
+                <span>PERSONAL ARCHIVE</span>
+                <span>PROFILE OVERVIEW</span>
               </div>
             </div>
 
@@ -106,7 +106,7 @@ export function IntroSection() {
               </p>
             </div>
 
-            {/* Verified Focus Badges */}
+            {/* Areas of Interest Badges */}
             <div className="pt-4 border-t border-[#101010]/15">
               <span className="font-mono text-[11px] uppercase tracking-widest text-[#77766F] block mb-3">
                 // AREAS OF INTEREST & EXPLORATION

@@ -80,10 +80,10 @@ export function WorkSection() {
 
               <div className="p-4 rounded-xl border border-universe-border bg-universe-bg/60 font-mono text-xs space-y-2">
                 <span className="text-universe-muted uppercase block text-[10px]">
-                  REPRESENTATION TRANSPARENCY
+                  PROJECT CONTEXT
                 </span>
                 <p className="text-universe-text text-[11px] leading-relaxed">
-                  Developed in the context of the national MITTI Café case competition. Recognized as a Top 10 finalist and offline final-round participant.
+                  A conceptual financial and expansion-planning simulator developed in the MITTI Café case competition (Top 10 Finalist | Offline Final-Round Participant at IIM Bangalore, November 2026).
                 </p>
               </div>
             </div>

@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowUpRight, Award, Compass, GraduationCap, ShieldCheck, Flag } from "lucide-react";
+import { ArrowUpRight, Award, BookOpen, Compass, GraduationCap, ShieldCheck, Flag } from "lucide-react";
 import { JOURNEY_TIMELINE, TimelineItem } from "@/data/journey";
 
 export function JourneySection() {
   const [activeCategory, setActiveCategory] = useState<string>("ALL");
 
-  const categories = ["ALL", "EDUCATION", "COMPETITION", "LEADERSHIP", "DIPLOMACY"];
+  const categories = ["ALL", "EDUCATION", "COMPETITION", "LEADERSHIP", "TEACHING", "DIPLOMACY"];
 
   const filteredItems =
     activeCategory === "ALL"
@@ -23,6 +23,8 @@ export function JourneySection() {
         return <Award className="w-4 h-4 text-universe-accent" />;
       case "LEADERSHIP":
         return <ShieldCheck className="w-4 h-4 text-universe-secondary" />;
+      case "TEACHING":
+        return <BookOpen className="w-4 h-4 text-amber-400" />;
       case "DIPLOMACY":
         return <Flag className="w-4 h-4 text-sky-400" />;
       default:
@@ -53,7 +55,7 @@ export function JourneySection() {
 
           <div className="max-w-md space-y-4">
             <p className="font-mono text-xs sm:text-sm text-universe-muted leading-relaxed">
-              Curiosity doesn&apos;t follow a linear career corridor. It branches across quantitative analytics, digital venture economics, competitive case defense, and disciplined cadet training.
+              Curiosity doesn&apos;t follow a linear career corridor. It branches across quantitative analytics, digital business studies, competitive case defense, cadet discipline, and independent teaching.
             </p>
 
             {/* Interactive Category Filter Pills */}
@@ -75,7 +77,7 @@ export function JourneySection() {
           </div>
         </div>
 
-        {/* Asymmetric Interactive Timeline Architecture */}
+        {/* Interactive Timeline */}
         <div className="relative border-l border-universe-border/80 ml-4 sm:ml-8 pl-6 sm:pl-12 space-y-12 lg:space-y-16">
           {filteredItems.map((item, index) => (
             <div
@@ -142,7 +144,7 @@ export function JourneySection() {
                     href="/work/mitti-compass"
                     className="inline-flex items-center gap-1.5 font-mono text-xs text-universe-accent hover:underline"
                   >
-                    <span>VIEW CASE STUDY</span>
+                    <span>STUDY MITTI COMPASS</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
                 )}

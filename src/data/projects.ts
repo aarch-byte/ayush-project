@@ -12,12 +12,17 @@ export interface CaseStudy {
   problem: string;
   approach: string[];
   solution: string;
+  pillars: {
+    label: string;
+    description: string;
+  }[];
   financialFramework: {
     label: string;
     description: string;
   }[];
   learnings: string[];
   featured: boolean;
+  status: "Conceptual Simulator & Framework" | "Exploratory Quantitative Model";
 }
 
 export const CASE_STUDIES: CaseStudy[] = [
@@ -25,76 +30,117 @@ export const CASE_STUDIES: CaseStudy[] = [
     id: "mitti-compass",
     slug: "mitti-compass",
     title: "MITTI COMPASS",
-    subtitle: "Strategic Financial & Expansion-Planning Framework for Social Inclusion",
-    category: "Financial Modeling & Business Strategy",
-    badge: "Top 10 Finalist — National Case Competition",
-    year: "2024",
+    subtitle: "Interactive Financial & Expansion-Planning Simulator Concept for MITTI Café",
+    category: "Financial Planning & Expansion Strategy",
+    badge: "Top 10 Finalist — MITTI Café Case Competition",
+    year: "November 2026",
     context:
-      "Developed in the context of the national MITTI Café case competition, focusing on sustainable financial expansion for café operations managed by persons with disabilities.",
-    role: "Strategic Financial Modeling, Unit Economics & Expansion Planning",
-    recognition: "Top 10 Finalist & Offline Final-Round Participant",
+      "Developed in the context of the MITTI Café Case Competition focusing on a social enterprise that employs persons with disabilities. The team reached the national Top 10 and participated in the offline final round at IIM Bangalore in November 2026.",
+    role: "Marketing & Finance Strategy, Expansion Simulator Design",
+    recognition: "Top 10 Finalist | Offline Final-Round Participant, IIM Bangalore",
     problem:
-      "MITTI Café balances a dual mandate: maximizing social inclusion while achieving economic resilience across high-cost urban retail locations. The challenge was architecting a scalable expansion blueprint that preserves training quality without escalating operational burn.",
+      "MITTI Café operates on a dual mandate: providing dignified employment to persons with disabilities while maintaining financial viability across high-cost urban environments. The expansion dilemma lies in evaluating new locations without overextending capital reserves or compromising specialized training workflows.",
     approach: [
-      "Rigorous unit-level cost analysis isolating raw materials, specialized adaptive equipment, and store-level labor.",
-      "Multi-scenario break-even modeling across diverse real estate footprints (corporate cafeterias vs. standalone high-street outlets).",
-      "Designing an operational expansion framework titled 'MITTI Compass' mapping capital expenditure to regional demographic hubs.",
+      "Geospatial location mapping assessing demographic clusters, tech-park densities, and transit accessibility.",
+      "Developing a dynamic scenario simulator contrasting conservative, moderate, and aggressive customer throughput assumptions.",
+      "Structuring the 'Spokes vs. Lighthouses' operational model to balance flagships against lower-overhead institutional kiosks.",
+      "Modeling funding considerations, grant utilization, and corporate sponsorship arrangements to protect cash flow reserves.",
     ],
     solution:
-      "A modular, phased expansion playbook combining low-CapEx institutional corporate partnerships with optimized supply-chain cluster kitchens to safeguard operating margins and enable predictable cash flows.",
+      "An interactive financial planning and expansion simulator concept that evaluates potential store locations, projects capital expenditure against expected footfalls, and compares institutional corporate hubs against high-street units before capital is deployed.",
+    pillars: [
+      {
+        label: "Spokes vs. Lighthouses Model",
+        description:
+          "Proposes centralized high-visibility 'Lighthouses' supported by agile, low-overhead corporate 'Spokes' to balance brand presence with lean operations.",
+      },
+      {
+        label: "Geospatial Location Mapping",
+        description:
+          "Evaluates potential site coordinates based on commercial density, transit convenience for disabled staff, and corporate partner proximity.",
+      },
+      {
+        label: "Scenario & Funding Planning",
+        description:
+          "Simulates cash-flow runways under varying capital structures, including CSR partnerships, institutional leases, and grant-aided expansion.",
+      },
+    ],
     financialFramework: [
       {
-        label: "Cluster Hub & Spoke Model",
-        description: "Centralized prep facilities reducing in-store kitchen footprint by 35% and standardizing unit quality.",
+        label: "Spokes vs. Lighthouses Model",
+        description:
+          "Proposes centralized high-visibility 'Lighthouses' supported by agile, low-overhead corporate 'Spokes' to balance brand presence with lean operations.",
       },
       {
-        label: "CapEx Amortization Structuring",
-        description: "Optimized corporate partnership leases that reduce upfront capital expenditure by over 40%.",
+        label: "Geospatial Location Mapping",
+        description:
+          "Evaluates potential site coordinates based on commercial density, transit convenience for disabled staff, and corporate partner proximity.",
       },
       {
-        label: "Adaptive Labor Capacity Index",
-        description: "Balancing training rotations with peak operational hours to protect customer throughput without compromising inclusion values.",
+        label: "Scenario & Funding Planning",
+        description:
+          "Simulates cash-flow runways under varying capital structures, including CSR partnerships, institutional leases, and grant-aided expansion.",
       },
     ],
     learnings: [
-      "Social enterprises require even tighter unit economics than traditional businesses because mission drift begins when financial runway ends.",
-      "In-person defense before seasoned industry evaluators taught the immense value of stress-testing sensitivity variables under adverse macro assumptions.",
+      "Mission-driven social enterprises require even stricter financial scrutiny than conventional businesses, because financial viability protects the humanitarian mission.",
+      "Defending strategic models in-person at IIM Bangalore before an experienced jury reinforced the necessity of stress-testing operational assumptions under conservative scenarios.",
     ],
     featured: true,
+    status: "Conceptual Simulator & Framework",
   },
   {
     id: "retail-analytics-model",
     slug: "retail-analytics-model",
     title: "OMNICHANNEL UNIT ECONOMICS SIMULATOR",
-    subtitle: "Algorithmic Cash-Flow & Inventory Dynamics in Emerging Commerce",
+    subtitle: "Exploratory Working-Capital & Inventory Flow Concept",
     category: "Data Analytics & Quantitative Finance",
-    badge: "Independent Research & Model",
-    year: "2024",
+    badge: "Independent Exploratory Model",
+    year: "2025",
     context:
-      "Exploratory quantitative analysis examining working capital cycles, customer acquisition cost sensitivity, and inventory turnover across modern D2C hybrid retail models.",
-    role: "Data Modeling & Scenario Synthesis",
-    recognition: "Academic & Practical Exploration",
+      "An exploratory quantitative project developed to analyze working capital cycles, contribution margins, and inventory turnover across hybrid commerce scenarios.",
+    role: "Quantitative Scenario Modeling",
+    recognition: "Academic & Personal Exploration",
     problem:
-      "Emerging direct-to-consumer brands frequently scale top-line GMV while deteriorating operating cash flows due to unoptimized return rates and inventory write-downs.",
+      "Growing consumer brands often generate top-line expansion while encountering severe working capital strain due to inventory holding times and return logistics.",
     approach: [
-      "Constructed dynamic Monte Carlo simulations evaluating inventory carrying costs against localized fulfillment lead times.",
-      "Analyzed cohort retention degradation to compute empirical LTV/CAC equilibrium thresholds.",
+      "Simulated inventory lead times and buffer levels across multi-channel distribution paths.",
+      "Constructed sensitivity tables evaluating contribution margins after factoring fulfillment and payment processing costs.",
     ],
     solution:
-      "An automated scenario dashboard isolating sensitivity drivers across SKU velocity, marketing attribution decay, and regional logistics costs.",
-    financialFramework: [
+      "A conceptual analytical model designed to visualize how variations in inventory velocity and return rates impact operating cash flows.",
+    pillars: [
       {
-        label: "Dynamic Safety Stock Calculation",
-        description: "Demand-weighted buffer models lowering stagnant inventory holding costs.",
+        label: "Inventory Velocity Analysis",
+        description: "Assessing carrying costs across variable SKU turnover rates.",
       },
       {
-        label: "Contribution Margin 3 Modeling",
-        description: "Factoring all return processing, reverse logistics, and payment gateway fees into real-time SKU profitability.",
+        label: "Margin Sensitivity Modeling",
+        description: "Evaluating net contribution margins across differing fulfillment channel costs.",
+      },
+      {
+        label: "Scenario Testing Dashboard",
+        description: "Simulating cash-flow impact under delayed receivable cycles.",
+      },
+    ],
+    financialFramework: [
+      {
+        label: "Inventory Velocity Analysis",
+        description: "Assessing carrying costs across variable SKU turnover rates.",
+      },
+      {
+        label: "Margin Sensitivity Modeling",
+        description: "Evaluating net contribution margins across differing fulfillment channel costs.",
+      },
+      {
+        label: "Scenario Testing Dashboard",
+        description: "Simulating cash-flow impact under delayed receivable cycles.",
       },
     ],
     learnings: [
-      "Data analytics is only as powerful as the operational lever it informs; telemetry without execution is noise.",
+      "Data models are only as valuable as the operational realities they reflect; theoretical math must align with physical supply chain constraints.",
     ],
     featured: false,
+    status: "Exploratory Quantitative Model",
   },
 ];

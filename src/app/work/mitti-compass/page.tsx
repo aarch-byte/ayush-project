@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Award, BarChart3, CheckCircle2, ChevronRight, FileSpreadsheet, Layers, Lightbulb, ShieldAlert, Sparkles, Target, TrendingUp } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Award, BarChart3, CheckCircle2, ChevronRight, Compass, FileSpreadsheet, Layers, Lightbulb, MapPin, ShieldAlert, Sparkles, Target, TrendingUp } from "lucide-react";
 import { CASE_STUDIES } from "@/data/projects";
 
 export default function MittiCompassPage() {
@@ -9,23 +9,23 @@ export default function MittiCompassPage() {
   const breakdownMetrics = [
     {
       metric: "TOP 10",
-      label: "National Standing",
-      context: "Selected from hundreds of university teams nationwide to compete in the offline grand finals.",
+      label: "National Finalist",
+      context: "Selected among top teams nationally to present in the offline final round at IIM Bangalore.",
     },
     {
       metric: "OFFLINE",
-      label: "Grand Finale Defense",
-      context: "Defended financial sensitivity models in-person before an executive jury of social enterprise leaders.",
+      label: "IIM Bangalore Finals",
+      context: "Participated in the offline final-round presentation and evaluation at IIM Bangalore in November 2026.",
     },
     {
-      metric: "3-TIER",
-      label: "Strategic Blueprint",
-      context: "Pillared around cluster kitchens, institutional lease structuring, and adaptive labor indexing.",
+      metric: "CONCEPT",
+      label: "Strategic Simulator",
+      context: "Designed an interactive financial planning and expansion simulator concept for location-based decision support.",
     },
     {
-      metric: "100%",
-      label: "Verified Representation",
-      context: "Accurate competitive milestone record without embellished claims or fabricated revenue metrics.",
+      metric: "VERIFIED",
+      label: "Accurate Representation",
+      context: "Clearly presented as a conceptual proposal and competitive simulation, without exaggerated or commercial claims.",
     },
   ];
 
@@ -52,8 +52,8 @@ export default function MittiCompassPage() {
             <span className="px-3.5 py-1 rounded-full bg-universe-accent text-universe-bg font-mono text-xs font-bold uppercase tracking-wider">
               {project.badge}
             </span>
-            <span className="px-3.5 py-1 rounded-full border border-universe-border bg-universe-surface font-mono text-xs text-universe-muted uppercase">
-              OFFLINE GRAND FINALIST
+            <span className="px-3.5 py-1 rounded-full border border-universe-border bg-universe-surface font-mono text-xs text-universe-accent uppercase">
+              OFFLINE FINALIST — IIM BANGALORE
             </span>
           </div>
 
@@ -72,15 +72,15 @@ export default function MittiCompassPage() {
               <span className="text-universe-text font-semibold">{project.role}</span>
             </div>
             <div>
-              <span className="text-universe-muted uppercase block text-[10px]">ORGANIZATION CONTEXT</span>
+              <span className="text-universe-muted uppercase block text-[10px]">ENTERPRISE CONTEXT</span>
               <span className="text-universe-text font-semibold">MITTI Social Initiatives</span>
             </div>
             <div>
-              <span className="text-universe-muted uppercase block text-[10px]">RECOGNITION LEVEL</span>
+              <span className="text-universe-muted uppercase block text-[10px]">RECOGNITION</span>
               <span className="text-universe-accent font-semibold">{project.recognition}</span>
             </div>
             <div>
-              <span className="text-universe-muted uppercase block text-[10px]">YEAR OF DEFENSE</span>
+              <span className="text-universe-muted uppercase block text-[10px]">TIMELINE</span>
               <span className="text-universe-text font-semibold">{project.year}</span>
             </div>
           </div>
@@ -103,157 +103,151 @@ export default function MittiCompassPage() {
           ))}
         </div>
 
-        {/* SECTION 1: Project Background & Context */}
+        {/* SECTION 1: Background & Social Mandate */}
         <section className="space-y-6 pt-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>01 // STRATEGIC BACKGROUND & THE INCLUSION MANDATE</span>
+            <span>01 // SOCIAL ENTERPRISE CONTEXT & MISSION</span>
           </div>
 
           <div className="prose prose-invert max-w-none text-base sm:text-lg text-universe-text/85 font-sans leading-relaxed space-y-4">
             <p>
-              MITTI Café is a pioneering, award-winning social enterprise operating across India that creates meaningful, dignified employment opportunities for persons with physical, intellectual, and psychiatric disabilities. Having served millions of meals, MITTI faces an essential strategic dilemma common to mission-driven organizations:
+              MITTI Café is a social enterprise dedicated to providing meaningful and dignified employment for persons with physical, intellectual, and psychiatric disabilities. Across its café network, MITTI creates inclusive physical spaces that demonstrate social value alongside commercial hospitality.
             </p>
             <div className="p-6 rounded-2xl border-l-2 border-universe-accent bg-universe-surface/60 font-serif italic text-xl text-universe-text my-4">
-              &ldquo;How can an inclusive social enterprise scale its retail footprint across premier corporate tech parks without suffering margin compression and escalating capital burn?&rdquo;
+              &ldquo;How can an inclusive social enterprise evaluate potential new locations, balance high urban rental costs, and expand sustainably without overextending capital resources?&rdquo;
             </div>
             <p>
-              This case competition invited multidisciplinary student teams nationwide to architect a strategic financial expansion framework capable of preserving MITTI&apos;s training and inclusion integrity while securing sustainable operational self-sufficiency.
+              As participants in the MITTI Café Case Competition, our team reached the national Top 10 and presented in the offline final round at IIM Bangalore in November 2026. My contributions centered on marketing, financial planning, and conceptualizing an expansion-decision simulator.
             </p>
           </div>
         </section>
 
-        {/* SECTION 2: The Core Problem Analysis */}
+        {/* SECTION 2: Problem Formulation */}
         <section className="p-8 sm:p-12 rounded-3xl border border-universe-border bg-universe-surface/70 space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-secondary uppercase tracking-widest">
             <ShieldAlert className="w-4 h-4" />
-            <span>02 // THE STRATEGIC BOTTLENECKS</span>
+            <span>02 // THE STRATEGIC EXPANSION CHALLENGE</span>
           </div>
 
           <h2 className="font-display font-bold text-2xl sm:text-4xl uppercase tracking-tight text-universe-text">
-            Three Structural Expansion Obstacles
+            Key Expansion Dilemmas
           </h2>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-4 font-mono text-xs">
             <div className="p-5 rounded-2xl border border-universe-border/60 bg-universe-bg/60 space-y-2">
-              <span className="text-universe-secondary font-bold text-[11px]">OBSTACLE 01</span>
-              <h3 className="font-display font-bold text-base uppercase text-universe-text">CapEx Intensity</h3>
+              <span className="text-universe-secondary font-bold text-[11px]">CHALLENGE 01</span>
+              <h3 className="font-display font-bold text-base uppercase text-universe-text">Location Feasibility</h3>
               <p className="text-universe-muted leading-relaxed">
-                Full-kitchen retail installations require heavy upfront capital expenditure for specialized adaptive culinary and point-of-sale infrastructure.
+                Determining whether high-traffic commercial spaces or corporate IT campuses offer better risk-adjusted returns for inclusive café setups.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl border border-universe-border/60 bg-universe-bg/60 space-y-2">
-              <span className="text-universe-secondary font-bold text-[11px]">OBSTACLE 02</span>
-              <h3 className="font-display font-bold text-base uppercase text-universe-text">Labor-Training Curve</h3>
+              <span className="text-universe-secondary font-bold text-[11px]">CHALLENGE 02</span>
+              <h3 className="font-display font-bold text-base uppercase text-universe-text">CapEx Allocation</h3>
               <p className="text-universe-muted leading-relaxed">
-                Staffing inclusive units requires longer onboarding and training cycles, which can cause erratic service cadence during peak breakfast and lunch rush hours.
+                Balancing upfront investments in accessible café infrastructure against available cash reserves and donor or corporate partnership commitments.
               </p>
             </div>
 
             <div className="p-5 rounded-2xl border border-universe-border/60 bg-universe-bg/60 space-y-2">
-              <span className="text-universe-secondary font-bold text-[11px]">OBSTACLE 03</span>
-              <h3 className="font-display font-bold text-base uppercase text-universe-text">Real Estate Volatility</h3>
+              <span className="text-universe-secondary font-bold text-[11px]">CHALLENGE 03</span>
+              <h3 className="font-display font-bold text-base uppercase text-universe-text">Operational Scalability</h3>
               <p className="text-universe-muted leading-relaxed">
-                High commercial square-footage lease obligations in metropolitan commercial zones strain operating cash flow before store maturity.
+                Preserving specialized staff training and support structures as the number of operating outlets increases across geographically dispersed locations.
               </p>
             </div>
           </div>
         </section>
 
-        {/* SECTION 3: My Analytical Approach & Modeling */}
+        {/* SECTION 3: Proposed Simulator Concept */}
         <section className="space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
             <Target className="w-3.5 h-3.5" />
-            <span>03 // ANALYTICAL & FINANCIAL MODELING APPROACH</span>
+            <span>03 // PROPOSED SOLUTION: MITTI COMPASS SIMULATOR CONCEPT</span>
           </div>
 
           <p className="text-base text-universe-text/80 font-sans leading-relaxed">
-            My personal contribution centered on deconstructing unit-level cost drivers, calculating break-even horizons, and designing sensitivity tables across diverse foot-traffic assumptions.
+            MITTI Compass was conceived as an interactive decision-support simulator designed to assist management in evaluating expansion opportunities before committing capital. The proposal integrated geospatial mapping, financial planning, scenario modeling, and funding structures.
           </p>
 
-          <div className="space-y-4 font-sans text-sm">
-            {project.approach.map((step, idx) => (
-              <div key={idx} className="flex items-start gap-4 p-5 rounded-xl border border-universe-border/70 bg-universe-surface/40">
-                <span className="font-mono text-xs font-bold text-universe-accent px-3 py-1 rounded bg-universe-bg border border-universe-border shrink-0">
-                  PHASE 0{idx + 1}
-                </span>
-                <p className="text-universe-text/90 leading-relaxed pt-0.5">
-                  {step}
-                </p>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 pt-2 font-mono text-xs">
+            <div className="p-6 rounded-2xl border border-universe-border bg-universe-surface/60 space-y-3">
+              <div className="flex items-center gap-2 text-universe-accent font-semibold">
+                <MapPin className="w-4 h-4" />
+                <span>GEOSPATIAL LOCATION MAPPING</span>
               </div>
-            ))}
-          </div>
-        </section>
-
-        {/* SECTION 4: The MITTI Compass Solution Blueprint */}
-        <section className="p-8 sm:p-12 rounded-3xl border border-universe-accent/40 bg-universe-surface/90 space-y-8 shadow-[0_0_50px_rgba(216,255,62,0.06)]">
-          <div className="space-y-3">
-            <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
-              <Layers className="w-4 h-4" />
-              <span>04 // THE STRATEGIC BLUEPRINT: MITTI COMPASS</span>
+              <p className="text-universe-muted leading-relaxed">
+                Evaluating potential café locations using commercial density metrics, transit convenience for disabled staff, and proximity to institutional corporate partners.
+              </p>
             </div>
-            <h2 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-universe-text">
-              The Three Pillars of Sustainable Scaling
-            </h2>
-          </div>
 
-          <p className="text-base sm:text-lg text-universe-text/90 font-sans leading-relaxed">
-            {project.solution}
-          </p>
-
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 pt-4">
-            {project.financialFramework.map((framework, fIdx) => (
-              <div key={fIdx} className="p-6 rounded-2xl border border-universe-border bg-universe-bg/90 space-y-3">
-                <span className="font-mono text-xs text-universe-accent font-bold">
-                  PILLAR 0{fIdx + 1}
-                </span>
-                <h3 className="font-display font-bold text-lg uppercase text-universe-text">
-                  {framework.label}
-                </h3>
-                <p className="font-mono text-xs text-universe-muted leading-relaxed">
-                  {framework.description}
-                </p>
+            <div className="p-6 rounded-2xl border border-universe-border bg-universe-surface/60 space-y-3">
+              <div className="flex items-center gap-2 text-universe-accent font-semibold">
+                <Compass className="w-4 h-4" />
+                <span>SPOKES VS. LIGHTHOUSES MODEL</span>
               </div>
-            ))}
+              <p className="text-universe-muted leading-relaxed">
+                Proposing high-visibility flagship &ldquo;Lighthouse&rdquo; cafés in prime areas, paired with lean, lower-overhead corporate &ldquo;Spokes&rdquo; to expand the employment footprint sustainably.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl border border-universe-border bg-universe-surface/60 space-y-3">
+              <div className="flex items-center gap-2 text-universe-accent font-semibold">
+                <BarChart3 className="w-4 h-4" />
+                <span>DYNAMIC SCENARIO MODELING</span>
+              </div>
+              <p className="text-universe-muted leading-relaxed">
+                Testing financial sensitivity across conservative, moderate, and optimistic customer footfalls to assess cash-flow stability under varied conditions.
+              </p>
+            </div>
+
+            <div className="p-6 rounded-2xl border border-universe-border bg-universe-surface/60 space-y-3">
+              <div className="flex items-center gap-2 text-universe-accent font-semibold">
+                <Layers className="w-4 h-4" />
+                <span>FUNDING & CSR STRUCTURING</span>
+              </div>
+              <p className="text-universe-muted leading-relaxed">
+                Incorporating grant allocations, CSR partnerships, and corporate sponsor leasing models into the financial projections to mitigate initial capital risk.
+              </p>
+            </div>
           </div>
         </section>
 
-        {/* SECTION 5: Competitive Defense & Personal Learnings */}
-        <section className="space-y-6">
+        {/* SECTION 4: Strategic Learnings & Offline Defense */}
+        <section className="p-8 sm:p-12 rounded-3xl border border-universe-border bg-universe-surface/70 space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
             <Lightbulb className="w-3.5 h-3.5" />
-            <span>05 // OUTCOMES & EXECUTIVE DEFENSE TAKEAWAYS</span>
+            <span>04 // REFLECTIONS FROM THE IIM BANGALORE FINALS</span>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <div className="p-8 rounded-2xl border border-universe-border bg-universe-surface/60 space-y-4">
-              <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase font-semibold">
-                <Award className="w-4 h-4" />
-                <span>OFFLINE GRAND FINALS EXPERIENCE</span>
-              </div>
-              <p className="text-sm sm:text-base text-universe-text/80 font-sans leading-relaxed">
-                Advancing as an offline national Top 10 finalist provided an invaluable forum to stress-test our strategic financial framework before a seasoned panel of industry leaders, evaluating realistic risk sensitivity under conservative footfall scenarios.
+            <div className="p-6 rounded-2xl border border-universe-border/60 bg-universe-bg/60 space-y-3">
+              <h3 className="font-display font-bold text-lg text-universe-text uppercase">
+                The Value of In-Person Defense
+              </h3>
+              <p className="text-sm text-universe-text/80 font-sans leading-relaxed">
+                Presenting our proposal in the offline final round at IIM Bangalore provided a valuable opportunity to receive feedback from judges experienced in social enterprise strategy, challenging us to defend our assumptions and focus on operational practicalities.
               </p>
             </div>
 
-            <div className="p-8 rounded-2xl border border-universe-border bg-universe-surface/60 space-y-4">
-              <div className="flex items-center gap-2 font-mono text-xs text-universe-secondary uppercase font-semibold">
-                <TrendingUp className="w-4 h-4" />
-                <span>PRIMARY STRATEGIC TAKEAWAY</span>
-              </div>
-              <p className="text-sm sm:text-base text-universe-text/80 font-sans leading-relaxed">
-                {project.learnings[0]} A social enterprise cannot rely on goodwill alone; operational durability requires unit margins that withstand economic cycles.
+            <div className="p-6 rounded-2xl border border-universe-border/60 bg-universe-bg/60 space-y-3">
+              <h3 className="font-display font-bold text-lg text-universe-text uppercase">
+                Balancing Mission and Math
+              </h3>
+              <p className="text-sm text-universe-text/80 font-sans leading-relaxed">
+                The competition reinforced that social impact and rigorous financial planning are complementary, not contradictory. Sustainable economics provide the foundation that allows an inclusive mission to thrive long-term.
               </p>
             </div>
           </div>
         </section>
 
-        {/* Verification Transparency Notice */}
+        {/* SECTION 5: Scope & Verification Statement */}
         <div className="p-6 rounded-2xl border border-universe-border/60 bg-universe-bg font-mono text-xs text-universe-muted flex items-start gap-4">
           <CheckCircle2 className="w-4 h-4 text-universe-accent shrink-0 mt-0.5" />
           <p className="leading-relaxed">
-            <strong className="text-universe-text">Factual Integrity Commitment:</strong> This case study accurately documents an academic and competitive strategy developed for the national MITTI Café case competition where the team was recognized as a Top 10 finalist. All frameworks represent conceptual strategic analysis.
+            <strong className="text-universe-text">Authentic Documentation Note:</strong> This case study reflects a conceptual strategy and decision-support simulator prototype developed for the MITTI Café Case Competition (Top 10 Finalist | Offline Final-Round Participant at IIM Bangalore, November 2026). It represents academic and competitive strategic analysis and does not claim commercial adoption or measured operational metrics.
           </p>
         </div>
 
@@ -271,7 +265,7 @@ export default function MittiCompassPage() {
             href="/contact"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-full bg-universe-accent text-universe-bg font-bold tracking-wider hover:bg-white transition-all shadow-[0_0_20px_rgba(216,255,62,0.2)]"
           >
-            <span>DISCUSS THIS FRAMEWORK</span>
+            <span>DISCUSS THIS STRATEGY</span>
             <ArrowUpRight className="w-4 h-4" />
           </Link>
         </footer>

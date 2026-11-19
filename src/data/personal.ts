@@ -6,20 +6,20 @@ export const PERSONAL_DATA = {
   headline: "I'M NOT HERE TO FIT INTO A BOX. I'M HERE TO EXPLORE WHAT'S OUTSIDE IT.",
   subheadline: "I DON'T HAVE A FINISHED STORY. I'M BUSY BUILDING ONE.",
   introHeadline: "A CURIOUS MIND. AN UNFINISHED STORY.",
-  location: "India / Available Worldwide",
+  location: "India",
   status: "Exploring Business, Finance & Technology",
   
   education: [
     {
       institution: "IIM Bangalore",
       degree: "BBA in Digital Business and Entrepreneurship",
-      status: "Ongoing",
+      status: "Pursuing (Concurrent)",
       focus: "Digital Business Models, Strategy & Entrepreneurship",
     },
     {
-      institution: "GNDU",
+      institution: "Guru Nanak Dev University (GNDU)",
       degree: "B.Com (Hons.) Data Analytics",
-      status: "Ongoing",
+      status: "Pursuing (Concurrent)",
       focus: "Financial Analysis, Statistics & Quantitative Analytics",
     },
   ],
@@ -27,57 +27,76 @@ export const PERSONAL_DATA = {
   achievements: [
     {
       title: "MITTI Café Case Competition",
-      role: "Top 10 Finalist & Offline Final-Round Participant",
+      role: "Top 10 Finalist — MITTI Café Case Competition | Offline Final-Round Participant, IIM Bangalore",
       category: "Strategy & Social Enterprise",
+      period: "November 2026",
       description:
-        "Developed 'MITTI Compass' — a strategic financial model and scalable expansion framework for inclusive employment café operations. Advanced to the national Top 10 offline finals.",
+        "Contributed to marketing and finance-related aspects of 'MITTI Compass' — a strategic financial and expansion-planning simulator concept for MITTI Café, balancing inclusive employment with location-based decision support. Advanced to the offline national Top 10 finals at IIM Bangalore.",
     },
     {
       title: "National Cadet Corps (NCC)",
       role: "'A' Certificate — Alpha Grade",
       category: "Discipline & Leadership",
+      period: "Class VIII – Class X (Completed 2023)",
       description:
-        "Completed rigorous cadet training demonstrating physical endurance, tactical coordination, and command discipline.",
+        "Completed three years of cadet training demonstrating physical endurance, tactical coordination, and command discipline, graduating with the highest Alpha grade.",
     },
     {
       title: "School House Leadership",
       role: "House Captain",
       category: "Student Governance",
+      period: "Class XII (2025)",
       description:
-        "Led inter-house academic, cultural, and sports contingents, coordinating student initiatives and team strategies.",
+        "Served as House Captain during Class XII, coordinating house contingents across school competitions, sports events, and student initiatives.",
     },
     {
       title: "Intra-School Business Quiz",
       role: "Second Position",
       category: "Business Knowledge",
+      period: "Class XII (2025)",
       description:
-        "Tested across macroeconomics, market developments, corporate history, and financial acumen.",
+        "Achieved second position in a Class XII intra-school business quiz evaluating macroeconomics, business history, and market developments.",
     },
     {
       title: "Model United Nations",
-      role: "Delegate (2 Conferences)",
+      role: "Delegate (Two Conferences)",
       category: "Diplomacy & Public Policy",
+      period: "High School",
       description:
-        "Engaged in multilateral committee debates, resolution drafting, and geopolitics negotiations.",
+        "Participated as a delegate across two Model United Nations conferences, engaging in committee debates, resolution drafting, and multilateral negotiations.",
+    },
+  ],
+
+  independentWork: [
+    {
+      title: "Independent Accountancy Tutoring",
+      role: "Independent Tutor",
+      description:
+        "Independently teaching Accountancy tuition, breaking down financial statements, ledger entries, and accounting principles for high school commerce students.",
     },
   ],
 
   interests: [
-    "Table tennis",
-    "Boxing",
-    "Business models",
-    "Finance",
-    "Entrepreneurship",
-    "Technology",
+    "Business and entrepreneurship",
+    "Finance and financial markets",
+    "Technology and emerging digital tools",
     "Data analytics",
+    "Table tennis (School-level)",
+    "Boxing (School-level)",
     "Travel and exploration",
+    "Reading and understanding new concepts",
   ],
 
-  languages: ["English", "Hindi", "Punjabi", "Urdu"],
+  languages: [
+    { name: "English", level: "Working & Academic Proficiency" },
+    { name: "Hindi", level: "Fluent & Working Proficiency" },
+    { name: "Punjabi", level: "Native / Conversational Fluency" },
+    { name: "Urdu", level: "Foundational & Conversational Understanding" },
+  ],
 
   contact: {
-    email: "contact@ayush.universe", // Placeholder to be updated with personal email
-    linkedin: "https://www.linkedin.com/",
+    email: "ayush23021@gmail.com",
+    linkedin: "https://www.linkedin.com/in/ayush-443819213/",
     location: "India",
   },
 };

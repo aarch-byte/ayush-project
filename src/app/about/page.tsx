@@ -7,27 +7,27 @@ export default function AboutPage() {
   const principles = [
     {
       number: "01",
-      title: "First-Principles Deconstruction",
+      title: "First-Principles Thinking",
       description:
-        "Refusing to accept conventional models at face value. Whether analyzing customer acquisition or operational overhead, truth resides at unit-level economics, not narrative momentum.",
+        "Looking past buzzwords to understand fundamental drivers. Whether exploring business models or financial statements, value is determined by unit economics, cash flow, and real customer utility.",
     },
     {
       number: "02",
-      title: "Kinetic & Intellectual Parity",
+      title: "Strategy Meets Quantitative Truth",
       description:
-        "Physical discipline in the boxing ring and at the table tennis table is not a distraction from intellectual work—it is its primary engine. Fast reaction time and emotional composure under pressure transfer directly to strategic negotiation.",
+        "Pairing business strategy from IIM Bangalore with empirical data analytics from GNDU. Ideas require analytical grounding; numbers require strategic context to be actionable.",
     },
     {
       number: "03",
-      title: "The Dual-Axis Advantage",
+      title: "Discipline and Composure",
       description:
-        "Synthesizing high-level platform business strategy at IIM Bangalore with ground-truth quantitative data analytics at GNDU. Ideas without data are delusions; data without business strategy is noise.",
+        "Cadet training in the NCC, student leadership as House Captain, and school-level sports like boxing and table tennis cultivate composure under pressure and steady execution.",
     },
     {
       number: "04",
-      title: "Unbounded Exploration",
+      title: "Learning as an Ongoing Process",
       description:
-        "A refusal to fit into pre-cast corporate or academic templates. Continuous learning across business models, finance, geopolitical diplomacy, and emerging technologies.",
+        "Refusing premature specialization. Exploring across digital business, finance, quantitative tools, and hands-on competitions to build a versatile problem-solving foundation.",
     },
   ];
 
@@ -45,14 +45,14 @@ export default function AboutPage() {
             <span>HOME</span>
           </Link>
           <span>/</span>
-          <span className="text-universe-accent uppercase">02 THE PERSON</span>
+          <span className="text-universe-accent uppercase">02 ABOUT</span>
         </div>
 
         {/* Editorial Title Banner */}
         <header className="border-b border-universe-border/60 pb-12 space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>BIOGRAPHICAL DOSSIER // AYUSH</span>
+            <span>PERSONAL PROFILE // AYUSH</span>
           </div>
 
           <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-8xl uppercase tracking-tightest leading-[0.92]">
@@ -64,11 +64,11 @@ export default function AboutPage() {
 
           <div className="pt-2 flex flex-col md:flex-row md:items-center justify-between gap-4 font-mono text-xs text-universe-muted">
             <p className="max-w-xl text-universe-text/80 text-sm leading-relaxed">
-              Curious explorer navigating the intersections of business models, corporate finance, data analytics, and continuous personal experimentation.
+              Curious explorer navigating the intersections of business strategy, finance, data analytics, and continuous learning.
             </p>
             <div className="flex items-center gap-4">
               <span className="px-3 py-1 rounded-full border border-universe-border bg-universe-surface text-universe-accent uppercase">
-                {PERSONAL_DATA.location}
+                LOCATION: {PERSONAL_DATA.location}
               </span>
               <span className="text-universe-border">•</span>
               <span className="text-universe-text">
@@ -78,10 +78,10 @@ export default function AboutPage() {
           </div>
         </header>
 
-        {/* Section 1: Dual Academic Pursuit & Methodology */}
+        {/* Section 1: Dual Academic Pursuit & Background */}
         <section className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-start">
           
-          {/* Left Column: Authentic Portrait Framing & Verified Stats */}
+          {/* Left Column: Portrait & Key Details */}
           <div className="lg:col-span-5 space-y-6">
             <div className="relative rounded-3xl border border-universe-border bg-universe-surface/80 p-8 space-y-6 overflow-hidden shadow-2xl">
               <div className="absolute top-0 right-0 w-48 h-48 bg-universe-accent/10 rounded-full blur-3xl pointer-events-none" />
@@ -91,7 +91,7 @@ export default function AboutPage() {
                   <User className="w-10 h-10 text-universe-accent" />
                 </div>
                 <span className="px-3 py-1 rounded-full border border-universe-accent/30 bg-universe-accent/10 font-mono text-[10px] text-universe-accent uppercase tracking-wider font-semibold">
-                  AUTHENTIC RECORD
+                  VERIFIED PROFILE
                 </span>
               </div>
 
@@ -106,7 +106,7 @@ export default function AboutPage() {
 
               <div className="space-y-4 pt-4 border-t border-universe-border/60 font-mono text-xs">
                 <div>
-                  <span className="text-universe-muted uppercase block text-[10px]">CURRENT DEGREES (CONCURRENT)</span>
+                  <span className="text-universe-muted uppercase block text-[10px]">CURRENT PROGRAMMES (CONCURRENT)</span>
                   <p className="text-universe-text font-semibold mt-1">
                     • IIM Bangalore — BBA in Digital Business & Entrepreneurship
                   </p>
@@ -116,45 +116,49 @@ export default function AboutPage() {
                 </div>
 
                 <div>
-                  <span className="text-universe-muted uppercase block text-[10px]">CADET RECORD</span>
-                  <p className="text-universe-text font-semibold mt-1">
-                    National Cadet Corps (NCC) — &apos;A&apos; Certificate (Alpha Grade)
-                  </p>
-                </div>
-
-                <div>
-                  <span className="text-universe-muted uppercase block text-[10px]">STUDENT GOVERNANCE</span>
-                  <p className="text-universe-text font-semibold mt-1">
-                    School House Captain
-                  </p>
-                </div>
-
-                <div>
-                  <span className="text-universe-muted uppercase block text-[10px]">CASE COMPETITION MILESTONE</span>
+                  <span className="text-universe-muted uppercase block text-[10px]">COMPETITION RECOGNITION</span>
                   <p className="text-universe-accent font-semibold mt-1">
-                    MITTI Café National Finalist (Top 10 Offline Grand Finals)
+                    Top 10 Finalist — MITTI Café Case Competition | Offline Final-Round Participant, IIM Bangalore (Nov 2026)
+                  </p>
+                </div>
+
+                <div>
+                  <span className="text-universe-muted uppercase block text-[10px]">LEADERSHIP & CADET TRAINING</span>
+                  <p className="text-universe-text font-semibold mt-1">
+                    • School House Captain (Class XII, 2025)
+                  </p>
+                  <p className="text-universe-text font-semibold mt-0.5">
+                    • NCC &apos;A&apos; Certificate — Alpha Grade (Completed 2023)
+                  </p>
+                </div>
+
+                <div>
+                  <span className="text-universe-muted uppercase block text-[10px]">INDEPENDENT WORK</span>
+                  <p className="text-universe-text font-semibold mt-1">
+                    Independent Accountancy Tuition
                   </p>
                 </div>
               </div>
             </div>
 
-            {/* Linguistic Fluency Box */}
+            {/* Linguistic Proficiency Box */}
             <div className="p-6 rounded-2xl border border-universe-border bg-universe-surface/60 space-y-3 font-mono text-xs">
               <span className="text-universe-accent uppercase tracking-widest block text-[11px] flex items-center gap-2 font-semibold">
                 <Globe2 className="w-4 h-4" />
-                <span>MULTILINGUAL FLUENCY</span>
+                <span>LANGUAGES</span>
               </span>
               <p className="text-universe-muted text-[11px] leading-relaxed">
-                Proficient across four regional and national tongues—enabling nuanced cultural rapport, negotiation, and ground-level perspective across diverse Indian markets:
+                Accurate perspective across regional and national languages:
               </p>
-              <div className="flex flex-wrap gap-2 pt-1">
+              <div className="space-y-2 pt-1 font-mono text-xs">
                 {PERSONAL_DATA.languages.map((lang, idx) => (
-                  <span
+                  <div
                     key={idx}
-                    className="px-3 py-1 rounded-full border border-universe-border bg-universe-bg text-universe-text text-[11px]"
+                    className="p-2.5 rounded-xl border border-universe-border/60 bg-universe-bg flex items-center justify-between"
                   >
-                    {lang}
-                  </span>
+                    <span className="text-universe-text font-semibold">{lang.name}</span>
+                    <span className="text-universe-muted text-[11px]">{lang.level}</span>
+                  </div>
                 ))}
               </div>
             </div>
@@ -170,44 +174,48 @@ export default function AboutPage() {
             </div>
 
             <p>
-              I believe modern education often forces premature specialization—funneling curious minds into narrow compartments before they understand how different systems connect. My academic path is an intentional rejection of that constraint.
+              I am someone who genuinely enjoys understanding how businesses function from the inside out: what gives an idea momentum, how unit economics sustain operations, and how data and technology can turn an abstract concept into a workable reality.
             </p>
 
             <p>
-              At <strong className="text-universe-text font-semibold">IIM Bangalore</strong>, I immerse myself in the architecture of digital platforms, network effects, and venture business strategy. Simultaneously, at <strong className="text-universe-text font-semibold">Guru Nanak Dev University (GNDU)</strong>, I ground those concepts in rigorous financial accounting, statistical modeling, and quantitative data analytics.
+              Rather than confining myself to a single discipline, I am currently pursuing two academic journeys simultaneously: a <strong className="text-universe-text font-semibold">BBA in Digital Business and Entrepreneurship at IIM Bangalore</strong> and a <strong className="text-universe-text font-semibold">B.Com (Hons.) in Data Analytics at Guru Nanak Dev University (GNDU)</strong>. This dual path allows me to bridge high-level strategic models with grounded financial accounting and statistical rigor.
             </p>
 
-            <p>
-              The result is a complementary lens: the strategic intuition to identify structural market opportunities, backed by the analytical discipline to stress-test unit economics on a spreadsheet before committing capital.
-            </p>
-
-            <h3 className="font-display font-bold text-2xl sm:text-3xl text-universe-text uppercase tracking-tight pt-6 border-t border-universe-border/40">
-              Discipline Beyond Rhetoric
+            <h3 className="font-display font-bold text-2xl sm:text-3xl text-universe-text uppercase tracking-tight pt-4 border-t border-universe-border/40">
+              Applied Problem-Solving & Case Competitions
             </h3>
 
             <p>
-              Ideas are abundant; execution requires self-governance. Completing cadet service in the <strong className="text-universe-text font-semibold">National Cadet Corps (NCC) with an &apos;Alpha&apos; grade</strong> taught me how to operate with absolute precision under fatigue. Whether leading peers as <strong className="text-universe-text font-semibold">School House Captain</strong>, sparring in the boxing gym, or defending policy resolutions across two <strong className="text-universe-text font-semibold">Model United Nations</strong> conferences, I gravitate toward environments where accountability is immediate.
+              One of the most defining experiences of my academic journey has been participating in the <strong className="text-universe-text font-semibold">MITTI Café Case Competition</strong>. Reaching the national Top 10 and presenting our strategy in the offline final round at IIM Bangalore in November 2026 provided deep insight into social enterprise economics. Contributing to marketing and financial planning for our concept—<em>MITTI Compass</em>—reinforced that social mission and financial viability must reinforce each other.
+            </p>
+
+            <h3 className="font-display font-bold text-2xl sm:text-3xl text-universe-text uppercase tracking-tight pt-4 border-t border-universe-border/40">
+              Discipline, Governance & Sharing Knowledge
+            </h3>
+
+            <p>
+              Discipline has been built through varied experiences: completing three years of cadet training in the <strong className="text-universe-text font-semibold">National Cadet Corps (NCC) with an &apos;Alpha&apos; grade</strong>, serving as <strong className="text-universe-text font-semibold">School House Captain during Class XII</strong>, participating in two Model United Nations conferences, and competing in school-level boxing and table tennis.
             </p>
 
             <p>
-              I am not here to compile a conventional corporate résumé or collect titles. I am building a toolkit to analyze, build, and scale resilient ventures that solve real economic and human challenges.
+              I also independently teach Accountancy tuition, helping students break down ledgers, balance sheets, and core financial principles. Teaching forces clarity—if you cannot explain a concept simply, you do not truly understand it yet.
             </p>
           </div>
         </section>
 
-        {/* Section 2: Core Operating Principles */}
+        {/* Section 2: Operating Principles */}
         <section className="pt-12 border-t border-universe-border/60 space-y-10">
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-4">
             <div>
               <span className="font-mono text-xs text-universe-accent uppercase tracking-widest block mb-2">
-                // PHILOSOPHICAL FOUNDATIONS
+                // FOUNDATIONS
               </span>
               <h2 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight">
-                HOW I THINK & OPERATE
+                HOW I APPROACH PROBLEMS
               </h2>
             </div>
             <p className="font-mono text-xs text-universe-muted max-w-sm">
-              The four foundational mental models that govern my study, strategic analysis, and daily habits.
+              The core principles guiding my academic exploration, business analysis, and daily habits.
             </p>
           </div>
 
@@ -218,7 +226,7 @@ export default function AboutPage() {
                 className="p-8 rounded-2xl border border-universe-border/80 bg-universe-surface/60 hover:bg-universe-surface/90 hover:border-universe-accent/50 transition-all space-y-4"
               >
                 <div className="flex items-center justify-between font-mono text-xs text-universe-accent">
-                  <span className="font-bold">{principle.number} // RULE</span>
+                  <span className="font-bold">{principle.number} // PRINCIPLE</span>
                   <span className="w-2 h-2 rounded-full bg-universe-accent" />
                 </div>
                 <h3 className="font-display font-bold text-2xl uppercase text-universe-text tracking-tight">
@@ -232,10 +240,10 @@ export default function AboutPage() {
           </div>
         </section>
 
-        {/* Section 3: Verified Interests & Inquiry Domains */}
+        {/* Section 3: Verified Areas of Interest */}
         <section className="pt-12 border-t border-universe-border/60 space-y-6">
           <span className="font-mono text-xs text-universe-accent uppercase tracking-widest block">
-            // DOMAINS OF CONTINUOUS INQUIRY
+            // AREAS OF ONGOING INTEREST
           </span>
 
           <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 font-mono text-xs">

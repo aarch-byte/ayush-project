@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, CheckCircle2, Clock, Copy, Mail, MessageSquare, Send, Sparkles, User } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, CheckCircle2, Copy, Mail, MessageSquare, Send, Sparkles, User } from "lucide-react";
 import { PERSONAL_DATA } from "@/data/personal";
 
 export default function ContactPage() {
@@ -16,7 +16,7 @@ export default function ContactPage() {
   });
 
   const handleCopyEmail = () => {
-    navigator.clipboard.writeText("ayush@digitaluniverse.com");
+    navigator.clipboard.writeText(PERSONAL_DATA.contact.email);
     setCopied(true);
     setTimeout(() => setCopied(false), 2500);
   };
@@ -24,6 +24,12 @@ export default function ContactPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (!formState.email || !formState.message) return;
+
+    const subject = encodeURIComponent(`[Website Inquiry] ${formState.topic} - from ${formState.name || "Visitor"}`);
+    const body = encodeURIComponent(`Name: ${formState.name}\nEmail: ${formState.email}\nTopic: ${formState.topic}\n\nMessage:\n${formState.message}`);
+    const mailtoUrl = `mailto:${PERSONAL_DATA.contact.email}?subject=${subject}&body=${body}`;
+
+    window.location.href = mailtoUrl;
     setSubmitted(true);
   };
 
@@ -49,18 +55,18 @@ export default function ContactPage() {
         <header className="border-b border-universe-border/60 pb-12 space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>TRANSMISSION PORTAL // DIRECT DIALOGUE</span>
+            <span>COMMUNICATION // DIRECT CONTACT</span>
           </div>
 
           <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-8xl uppercase tracking-tightest leading-[0.92]">
-            LET&apos;S MAKE <br />
+            LET&apos;S START A <br />
             <span className="font-serif italic font-normal text-universe-accent lowercase tracking-normal">
-              something happen.
+              conversation.
             </span>
           </h1>
 
           <p className="font-mono text-xs sm:text-sm text-universe-muted max-w-2xl leading-relaxed">
-            Whether you want to deconstruct an unconventional business model, discuss the MITTI Compass financial framework, explore a collaborative venture, or simply exchange ideas with a curious mind.
+            Whether you want to discuss the MITTI Compass simulator concept, explore ideas in business strategy and data analytics, or connect around shared interests in entrepreneurship and finance.
           </p>
         </header>
 
@@ -76,7 +82,7 @@ export default function ContactPage() {
                 DIRECT INBOX
               </span>
               <p className="font-display font-bold text-2xl text-universe-text tracking-tight break-all">
-                ayush@digitaluniverse.com
+                {PERSONAL_DATA.contact.email}
               </p>
               <button
                 onClick={handleCopyEmail}
@@ -98,163 +104,120 @@ export default function ContactPage() {
             </div>
 
             {/* Professional Profiles */}
-            <div className="p-8 rounded-3xl border border-universe-border bg-universe-surface/80 space-y-4 font-mono text-xs">
-              <span className="text-universe-accent uppercase tracking-widest block font-semibold text-[11px]">
-                NETWORKS & LOCATION
+            <div className="p-8 rounded-3xl border border-universe-border bg-universe-surface/80 space-y-4">
+              <span className="font-mono text-[11px] text-universe-accent uppercase tracking-widest block font-semibold">
+                PROFESSIONAL PROFILE
               </span>
 
-              <div className="space-y-3">
+              <div className="space-y-3 font-mono text-xs">
                 <a
-                  href="https://www.linkedin.com"
+                  href={PERSONAL_DATA.contact.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="flex items-center justify-between p-4 rounded-xl border border-universe-border/60 bg-universe-bg hover:border-universe-accent hover:text-universe-accent transition-all text-universe-text group"
                 >
-                  <span className="font-semibold">LINKEDIN // VERIFIED PROFILE</span>
-                  <ArrowUpRight className="w-4 h-4 text-universe-muted group-hover:text-universe-accent transition-colors" />
+                  <div className="flex items-center gap-2">
+                    <span className="w-2 h-2 rounded-full bg-universe-accent" />
+                    <span>LINKEDIN PROFILE</span>
+                  </div>
+                  <ArrowUpRight className="w-4 h-4 group-hover:translate-x-0.5 group-hover:-translate-y-0.5 transition-transform" />
                 </a>
 
-                <div className="p-4 rounded-xl border border-universe-border/40 bg-universe-bg/40 text-universe-muted flex items-center justify-between">
-                  <span>BASE GEOGRAPHY</span>
-                  <span className="text-universe-text font-semibold">{PERSONAL_DATA.location}</span>
+                <div className="p-4 rounded-xl border border-universe-border/40 bg-universe-bg/50 text-universe-muted text-[11px] space-y-1">
+                  <span className="text-universe-text block font-semibold">ACADEMIC JOURNEYS:</span>
+                  <p>• IIM Bangalore — BBA in Digital Business & Entrepreneurship</p>
+                  <p>• GNDU — B.Com (Hons.) Data Analytics</p>
                 </div>
               </div>
-            </div>
-
-            {/* Response Protocol */}
-            <div className="p-6 rounded-2xl border border-universe-border/40 bg-universe-surface/40 font-mono text-xs text-universe-muted space-y-2">
-              <span className="text-universe-accent uppercase block font-semibold text-[11px] flex items-center gap-2">
-                <Clock className="w-3.5 h-3.5" />
-                <span>RESPONSE PROTOCOL</span>
-              </span>
-              <p className="leading-relaxed">
-                Direct communication, zero automated filters. Messages typically receive an authentic personal reply within 24–48 hours.
-              </p>
             </div>
           </div>
 
-          {/* Right Column: Interactive Transmission Form */}
-          <div className="lg:col-span-7 p-8 sm:p-12 rounded-3xl border border-universe-border bg-universe-surface/90 relative">
-            {submitted ? (
-              <div className="py-20 text-center space-y-6 animate-in fade-in duration-500">
-                <div className="w-20 h-20 rounded-full bg-universe-accent/20 border-2 border-universe-accent text-universe-accent flex items-center justify-center mx-auto shadow-[0_0_40px_rgba(216,255,62,0.3)]">
-                  <CheckCircle2 className="w-10 h-10" />
-                </div>
-                <div className="space-y-2">
-                  <h3 className="font-display font-bold text-3xl text-universe-text uppercase tracking-tight">
-                    TRANSMISSION DELIVERED
+          {/* Right Column: Message Dispatcher Form */}
+          <div className="lg:col-span-7">
+            <div className="p-8 sm:p-10 rounded-3xl border border-universe-border bg-universe-surface/80 shadow-2xl relative">
+              
+              {submitted ? (
+                <div className="py-16 text-center space-y-4 font-mono">
+                  <div className="w-14 h-14 rounded-full bg-universe-accent/20 border border-universe-accent text-universe-accent flex items-center justify-center mx-auto">
+                    <CheckCircle2 className="w-7 h-7" />
+                  </div>
+                  <h3 className="font-display font-bold text-2xl uppercase tracking-tight text-universe-text">
+                    Email Client Dispatched
                   </h3>
-                  <p className="font-mono text-xs text-universe-muted max-w-sm mx-auto leading-relaxed">
-                    Thank you, {formState.name || "Colleague"}. Your note has been securely transmitted. Ayush will review and respond.
+                  <p className="text-xs text-universe-muted max-w-sm mx-auto leading-relaxed">
+                    Your transmission has been forwarded to your mail client addressed to {PERSONAL_DATA.contact.email}.
                   </p>
+                  <button
+                    onClick={() => setSubmitted(false)}
+                    className="inline-block mt-4 text-xs text-universe-accent hover:underline uppercase"
+                  >
+                    Send another message
+                  </button>
                 </div>
-                <button
-                  onClick={() => {
-                    setSubmitted(false);
-                    setFormState({ name: "", email: "", topic: "Business Strategy / Ideas", message: "" });
-                  }}
-                  className="px-6 py-2.5 rounded-full border border-universe-border bg-universe-bg font-mono text-xs text-universe-accent hover:border-universe-accent transition-all"
-                >
-                  TRANSMIT ANOTHER NOTE
-                </button>
-              </div>
-            ) : (
-              <form onSubmit={handleSubmit} className="space-y-6">
-                <div className="flex items-center justify-between border-b border-universe-border/60 pb-4">
-                  <span className="font-mono text-xs text-universe-accent uppercase tracking-widest font-semibold flex items-center gap-2">
-                    <MessageSquare className="w-3.5 h-3.5" />
-                    <span>TRANSMISSION FORM</span>
-                  </span>
-                  <span className="font-mono text-[10px] text-universe-muted uppercase">
-                    ALL FIELDS SECURE
-                  </span>
-                </div>
-
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+              ) : (
+                <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="space-y-2 font-mono text-xs">
-                    <label htmlFor="name" className="text-universe-muted uppercase block font-semibold">
-                      YOUR NAME
-                    </label>
+                    <label className="text-universe-muted uppercase block">Your Name</label>
                     <input
-                      id="name"
                       type="text"
-                      required
-                      placeholder="e.g. Alex Morgan"
+                      placeholder="e.g. Rahul Sharma"
                       value={formState.name}
                       onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-universe-border bg-universe-bg text-universe-text placeholder:text-universe-muted/40 focus:border-universe-accent focus:ring-1 focus:ring-universe-accent outline-none font-mono text-xs transition-all"
+                      className="w-full px-4 py-3.5 rounded-xl border border-universe-border bg-universe-bg text-universe-text placeholder:text-universe-muted/50 focus:outline-none focus:border-universe-accent font-sans text-sm"
                     />
                   </div>
 
                   <div className="space-y-2 font-mono text-xs">
-                    <label htmlFor="email" className="text-universe-muted uppercase block font-semibold">
-                      EMAIL ADDRESS
-                    </label>
+                    <label className="text-universe-muted uppercase block">Your Email Address</label>
                     <input
-                      id="email"
                       type="email"
                       required
-                      placeholder="e.g. alex@example.com"
+                      placeholder="e.g. rahul@example.com"
                       value={formState.email}
                       onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                      className="w-full px-4 py-3 rounded-xl border border-universe-border bg-universe-bg text-universe-text placeholder:text-universe-muted/40 focus:border-universe-accent focus:ring-1 focus:ring-universe-accent outline-none font-mono text-xs transition-all"
+                      className="w-full px-4 py-3.5 rounded-xl border border-universe-border bg-universe-bg text-universe-text placeholder:text-universe-muted/50 focus:outline-none focus:border-universe-accent font-sans text-sm"
                     />
                   </div>
-                </div>
 
-                <div className="space-y-2 font-mono text-xs">
-                  <label htmlFor="topic" className="text-universe-muted uppercase block font-semibold">
-                    INQUIRY FOCUS
-                  </label>
-                  <select
-                    id="topic"
-                    value={formState.topic}
-                    onChange={(e) => setFormState({ ...formState, topic: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-universe-border bg-universe-bg text-universe-text focus:border-universe-accent focus:ring-1 focus:ring-universe-accent outline-none font-mono text-xs transition-all"
+                  <div className="space-y-2 font-mono text-xs">
+                    <label className="text-universe-muted uppercase block">Topic of Discussion</label>
+                    <select
+                      value={formState.topic}
+                      onChange={(e) => setFormState({ ...formState, topic: e.target.value })}
+                      className="w-full px-4 py-3.5 rounded-xl border border-universe-border bg-universe-bg text-universe-text focus:outline-none focus:border-universe-accent font-sans text-sm"
+                    >
+                      <option value="Business Strategy / Ideas">Business Strategy & Ideas</option>
+                      <option value="Financial Analysis & Modeling">Financial Analysis & Modeling</option>
+                      <option value="MITTI Compass Case Study">MITTI Compass Case Study</option>
+                      <option value="Data Analytics & Projects">Data Analytics & Projects</option>
+                      <option value="General Conversation">General Conversation</option>
+                    </select>
+                  </div>
+
+                  <div className="space-y-2 font-mono text-xs">
+                    <label className="text-universe-muted uppercase block">Message</label>
+                    <textarea
+                      required
+                      rows={5}
+                      placeholder="Write your note or question here..."
+                      value={formState.message}
+                      onChange={(e) => setFormState({ ...formState, message: e.target.value })}
+                      className="w-full px-4 py-3.5 rounded-xl border border-universe-border bg-universe-bg text-universe-text placeholder:text-universe-muted/50 focus:outline-none focus:border-universe-accent font-sans text-sm resize-none"
+                    />
+                  </div>
+
+                  <button
+                    type="submit"
+                    className="w-full flex items-center justify-center gap-2 px-6 py-4 rounded-xl bg-universe-accent text-universe-bg font-mono text-xs uppercase tracking-wider font-bold hover:bg-white transition-all shadow-[0_0_20px_rgba(216,255,62,0.2)]"
                   >
-                    <option value="Business Strategy / Ideas">Business Strategy & Digital Platforms</option>
-                    <option value="MITTI Compass Case Inquiry">MITTI Compass Case Study Inquiry</option>
-                    <option value="Data Analytics Discussion">Data Analytics & Quantitative Finance</option>
-                    <option value="General Conversation / Connect">General Intellectual Exchange / Connect</option>
-                  </select>
-                </div>
-
-                <div className="space-y-2 font-mono text-xs">
-                  <label htmlFor="message" className="text-universe-muted uppercase block font-semibold">
-                    YOUR NOTE / INQUIRY
-                  </label>
-                  <textarea
-                    id="message"
-                    required
-                    rows={5}
-                    placeholder="Describe your inquiry, business problem, or idea..."
-                    value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    className="w-full px-4 py-3 rounded-xl border border-universe-border bg-universe-bg text-universe-text placeholder:text-universe-muted/40 focus:border-universe-accent focus:ring-1 focus:ring-universe-accent outline-none font-mono text-xs transition-all resize-none"
-                  />
-                </div>
-
-                <button
-                  type="submit"
-                  className="w-full group flex items-center justify-center gap-2 py-4 rounded-xl bg-universe-accent text-universe-bg font-mono text-xs font-bold uppercase tracking-wider hover:bg-white transition-all shadow-[0_0_25px_rgba(216,255,62,0.25)]"
-                >
-                  <Send className="w-4 h-4 transition-transform group-hover:translate-x-1" />
-                  <span>TRANSMIT MESSAGE TO AYUSH</span>
-                </button>
-              </form>
-            )}
+                    <span>OPEN EMAIL DISPATCHER</span>
+                    <Send className="w-3.5 h-3.5" />
+                  </button>
+                </form>
+              )}
+            </div>
           </div>
         </div>
-
-        {/* Footer Navigation */}
-        <footer className="pt-12 border-t border-universe-border/60 flex items-center justify-between font-mono text-xs">
-          <Link href="/beyond" className="hover:text-universe-accent transition-colors flex items-center gap-1">
-            <span>← 06 BEYOND THE WORK</span>
-          </Link>
-          <Link href="/" className="hover:text-universe-accent transition-colors flex items-center gap-1">
-            <span>01 RETURN TO HOME →</span>
-          </Link>
-        </footer>
       </div>
     </div>
   );

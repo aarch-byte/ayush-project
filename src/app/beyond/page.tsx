@@ -1,67 +1,83 @@
 import React from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Compass, Dumbbell, Globe, HeartHandshake, Shield, Sparkles, Trophy, Zap } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, BookOpen, Compass, Dumbbell, Globe, HeartHandshake, Shield, Sparkles, Trophy, Zap } from "lucide-react";
+import { PERSONAL_DATA } from "@/data/personal";
 
 export default function BeyondPage() {
   const experiences = [
     {
       title: "BOXING",
-      discipline: "Kinetic Presence & Tactical Composure",
-      category: "COMBAT DISCIPLINE",
+      discipline: "School-Level Participation & Discipline",
+      category: "PHYSICAL TRAINING",
       accent: "#FF674A",
       icon: <Dumbbell className="w-5 h-5 text-universe-secondary" />,
-      quote: "Inside the ring, rhetoric is useless. You are either balanced, or you are hit.",
+      quote: "Discipline in the gym builds composure and focus under pressure.",
       narrative:
-        "Boxing is an uncompromising teacher of honesty. There is no hiding behind clever phrasing or delegating responsibility inside the ropes. It demands total situational awareness, microsecond reaction time, defensive composure under physical strain, and constant rhythm modulation.",
+        "Participated in boxing at the school level and maintained personal conditioning. Inside the gym, there are no shortcuts. It demands physical endurance, defensive composure under strain, and steady emotional balance.",
       takeaways: [
-        "Mastering emotional composure while under intense physical pressure",
-        "Reading subtle micro-tells and weight shifts in an opponent",
-        "The discipline of relentless footwork and energy conservation",
+        "Composure and situational focus under physical fatigue",
+        "Spatial awareness and reaction timing",
+        "The discipline of consistent daily conditioning",
       ],
     },
     {
       title: "TABLE TENNIS",
-      discipline: "Reflex Geometry & Spin Mechanics",
-      category: "TACTICAL RACQUET SPORT",
+      discipline: "School-Level Competition & Reflexes",
+      category: "RACQUET SPORT",
       accent: "#D8FF3E",
       icon: <Trophy className="w-5 h-5 text-universe-accent" />,
-      quote: "A game of centimeters where decisions occur faster than conscious thought.",
+      quote: "A game of anticipation, spin mechanics, and millisecond tactical adjustments.",
       narrative:
-        "Table tennis is physical geometry at lightning velocity. Reading the subtle brush angle of an opponent's paddle to anticipate topspin, underspin, or sidespin before the ball crosses the net. It requires combining explosive acceleration with delicate fingertip touch control.",
+        "Competed in table tennis at the school level. A fast-paced sport where reading the opponent's paddle angle, anticipating spin, and placing the ball with controlled touch require rapid micro-decisions.",
       takeaways: [
-        "Anticipating three strokes ahead of the current ball placement",
-        "Subtle touch control balancing speed with high-friction spin",
-        "Exploiting spatial angles to force unforced opponent errors",
+        "Anticipating trajectory angles before contact",
+        "Touch control balancing speed with spin rotation",
+        "Maintaining concentration through long rallies",
       ],
     },
     {
       title: "MODEL UNITED NATIONS",
-      discipline: "Multilateral Diplomacy & Resolution Craft",
-      category: "PUBLIC DIPLOMACY (2 CONFERENCES)",
+      discipline: "Multilateral Negotiation & Policy Discussion",
+      category: "DIPLOMACY (2 CONFERENCES)",
       accent: "#38bdf8",
       icon: <Globe className="w-5 h-5 text-sky-400" />,
-      quote: "Diplomacy is the art of aligning opposing self-interests toward mutual action.",
+      quote: "Understanding different perspectives is the prerequisite for collaborative resolution.",
       narrative:
-        "Participated as a delegate in two intensive Model United Nations assemblies. Represented designated member states across contentious committee sessions, drafting actionable multilateral clauses, building cross-caucus voting blocs, and defending treaty resolutions during cross-examination.",
+        "Participated as a delegate in two Model United Nations conferences. Represented assigned nations in structured committee sessions, negotiating policy clauses, engaging in debate, and collaborating with fellow delegates to draft resolutions.",
       takeaways: [
-        "Deconstructing complex geopolitical mandates into operative clauses",
-        "Negotiating coalitions across competing ideological positions",
-        "Composed public speaking under aggressive committee scrutiny",
+        "Analyzing policy issues from an assigned nation's perspective",
+        "Collaborative drafting and cross-caucus consensus building",
+        "Structured public speaking and defending proposals under questioning",
       ],
     },
     {
-      title: "GROUND EXPEDITIONS & COMMERCE",
-      discipline: "Local Market Dynamics & Linguistic Immersion",
-      category: "CULTURAL DISCOVERY & TRADE",
+      title: "ACCOUNTANCY TUTORING",
+      discipline: "Independent Teaching & Financial Fundamentals",
+      category: "COMMERCE EDUCATION",
+      accent: "#f59e0b",
+      icon: <BookOpen className="w-5 h-5 text-amber-400" />,
+      quote: "Teaching reveals whether you truly understand the mechanics beneath the formulas.",
+      narrative:
+        "Independently tutoring students in Accountancy, explaining ledger debit/credit mechanics, financial statement construction, cash flows, and balance sheets. Breaking down complex commercial concepts for students strengthens my own first-principles understanding.",
+      takeaways: [
+        "Deconstructing accounting principles into clear, intuitive steps",
+        "Fostering patience and adaptable pedagogical explanations",
+        "Reinforcing foundational financial and balance sheet mechanics",
+      ],
+    },
+    {
+      title: "TRAVEL & PERSPECTIVE",
+      discipline: "Regional Exploration & Local Markets",
+      category: "CULTURAL OBSERVATION",
       accent: "#34d399",
       icon: <Compass className="w-5 h-5 text-emerald-400" />,
-      quote: "To understand an economy, observe how local merchants price perishables.",
+      quote: "Observing local commerce in person grounds theoretical economic concepts.",
       narrative:
-        "Traveling across the diverse cultural corridors of North and South India. Fluent across English, Hindi, Punjabi, and Urdu, I observe ground-level supply chains, localized pricing behaviors, and how family-run micro-enterprises navigate credit cycles and working capital constraints.",
+        "Traveling across different regions in India and observing how local markets and small enterprises operate. With working proficiency in English and Hindi, native conversational fluency in Punjabi, and foundational understanding of Urdu, engaging with diverse communities offers authentic commercial perspective.",
       takeaways: [
-        "First-hand observation of unorganized retail and bazaar liquidity",
-        "Linguistic agility bridging regional barriers with authenticity",
-        "Appreciation for localized economic resilience away from corporate bubbles",
+        "First-hand observation of local merchant cash-flow dynamics",
+        "Multilingual communication bridging regional contexts",
+        "Appreciating diverse commercial traditions across communities",
       ],
     },
   ];
@@ -87,7 +103,7 @@ export default function BeyondPage() {
         <header className="border-b border-universe-border/60 pb-12 space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>THE UNFILTERED INDIVIDUAL // ATHLETICS, DIPLOMACY & LIFE</span>
+            <span>PERSONAL PURSUITS // SPORTS, DIPLOMACY & TEACHING</span>
           </div>
 
           <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-8xl uppercase tracking-tightest leading-[0.92]">
@@ -98,70 +114,66 @@ export default function BeyondPage() {
           </h1>
 
           <p className="font-mono text-xs sm:text-sm text-universe-muted max-w-2xl leading-relaxed">
-            Character is forged away from the laptop. The athletic disciplines, diplomatic assemblies, and observational travels that shape intuition and resilience.
+            School-level athletics, Model United Nations conferences, independent accountancy teaching, and travel experiences that broaden perspective.
           </p>
         </header>
 
-        {/* Four In-Depth Discipline Showcases */}
+        {/* Deep Dive Experience Cards */}
         <div className="space-y-12">
           {experiences.map((exp, idx) => (
             <div
               key={idx}
-              className="p-8 sm:p-12 rounded-3xl border border-universe-border/80 bg-universe-surface/60 hover:bg-universe-surface/90 hover:border-universe-accent/40 transition-all duration-300 relative overflow-hidden"
+              className="group relative rounded-3xl border border-universe-border/70 bg-universe-surface/60 p-8 sm:p-12 hover:border-universe-accent/40 transition-all duration-300 overflow-hidden"
             >
-              {/* Subtle Ambient Backlight Glow */}
+              {/* Subtle Ambient Radial Highlight */}
               <div
-                className="absolute top-0 right-0 w-72 h-72 rounded-full blur-[100px] pointer-events-none opacity-15"
+                className="absolute top-0 right-0 w-80 h-80 rounded-full blur-[100px] pointer-events-none opacity-15 group-hover:opacity-30 transition-opacity"
                 style={{ backgroundColor: exp.accent }}
               />
 
-              {/* Header Meta */}
+              {/* Card Meta */}
               <div className="flex flex-wrap items-center justify-between gap-4 border-b border-universe-border/40 pb-6 mb-8 font-mono text-xs">
-                <div className="flex items-center gap-3">
-                  <span className="p-2 rounded-xl bg-universe-bg border border-universe-border">
+                <div className="flex items-center gap-2.5">
+                  <span className="p-2 rounded-xl bg-universe-bg border border-universe-border/60">
                     {exp.icon}
                   </span>
-                  <span className="font-bold uppercase tracking-wider text-universe-text text-[11px]">
+                  <span className="uppercase tracking-wider font-semibold text-universe-text text-[11px]">
                     {exp.category}
                   </span>
                 </div>
-                <span className="text-universe-muted uppercase">
-                  EXPERIENCE RECORD // NO STOCK FABRICATION
+                <span className="text-universe-accent text-[11px]">
+                  // {exp.discipline}
                 </span>
               </div>
 
-              {/* Title & Subtitle */}
-              <div className="space-y-3">
-                <h2 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-universe-text">
+              {/* Headline & Quote */}
+              <div className="space-y-4 max-w-3xl">
+                <h2 className="font-display font-black text-3xl sm:text-5xl uppercase tracking-tight text-universe-text group-hover:text-universe-accent transition-colors">
                   {exp.title}
                 </h2>
-                <p className="font-mono text-xs text-universe-accent uppercase tracking-wider">
-                  // {exp.discipline}
+                <p className="font-serif italic text-xl sm:text-2xl text-universe-text/90 leading-snug">
+                  &ldquo;{exp.quote}&rdquo;
                 </p>
               </div>
 
-              {/* Quote & Narrative */}
-              <div className="my-8 pt-6 border-t border-universe-border/40 grid grid-cols-1 lg:grid-cols-12 gap-8">
-                <div className="lg:col-span-6 space-y-4">
-                  <div className="border-l-2 pl-4 py-1" style={{ borderColor: exp.accent }}>
-                    <p className="font-serif italic text-xl text-universe-text leading-snug">
-                      &ldquo;{exp.quote}&rdquo;
-                    </p>
-                  </div>
-                  <p className="font-sans text-sm sm:text-base text-universe-text/80 leading-relaxed">
-                    {exp.narrative}
-                  </p>
+              {/* Main Narrative & Takeaways Grid */}
+              <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 my-8 pt-6 border-t border-universe-border/40 text-sm">
+                <div className="lg:col-span-7 space-y-4 text-universe-text/80 font-sans leading-relaxed">
+                  <span className="font-mono text-xs text-universe-accent uppercase block font-semibold">
+                    THE EXPERIENCE
+                  </span>
+                  <p>{exp.narrative}</p>
                 </div>
 
-                <div className="lg:col-span-6 space-y-3 p-6 rounded-2xl border border-universe-border bg-universe-bg/70 font-mono text-xs">
-                  <span className="text-universe-accent uppercase block font-semibold text-[10px] tracking-wider">
-                    OPERATIONAL & STRATEGIC TAKEAWAYS:
+                <div className="lg:col-span-5 space-y-3 font-mono text-xs">
+                  <span className="text-universe-accent uppercase block font-semibold">
+                    KEY TAKEAWAYS:
                   </span>
-                  <ul className="space-y-2 text-universe-text/90 text-xs">
+                  <ul className="space-y-2">
                     {exp.takeaways.map((takeaway, tIdx) => (
-                      <li key={tIdx} className="flex items-start gap-2">
-                        <span className="mt-0.5 text-universe-accent">›</span>
-                        <span>{takeaway}</span>
+                      <li key={tIdx} className="flex items-start gap-2.5 text-universe-text/90">
+                        <span className="w-1.5 h-1.5 rounded-full bg-universe-accent mt-1.5 shrink-0" />
+                        <span className="leading-relaxed">{takeaway}</span>
                       </li>
                     ))}
                   </ul>
@@ -177,7 +189,7 @@ export default function BeyondPage() {
             <span>← 05 THE THINKING</span>
           </Link>
           <Link href="/contact" className="hover:text-universe-accent transition-colors flex items-center gap-1">
-            <span>07 CONNECT →</span>
+            <span>07 INITIATE CONTACT →</span>
           </Link>
         </footer>
       </div>

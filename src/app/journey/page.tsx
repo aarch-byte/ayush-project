@@ -2,13 +2,13 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { ArrowLeft, ArrowUpRight, Award, Compass, Flag, GraduationCap, Layers, ShieldCheck, Sparkles } from "lucide-react";
+import { ArrowLeft, ArrowUpRight, Award, BookOpen, Compass, Flag, GraduationCap, Layers, ShieldCheck, Sparkles } from "lucide-react";
 import { JOURNEY_TIMELINE, TimelineItem } from "@/data/journey";
 
 export default function JourneyPage() {
   const [activeCategory, setActiveCategory] = useState<string>("ALL");
 
-  const categories = ["ALL", "EDUCATION", "COMPETITION", "LEADERSHIP", "DIPLOMACY"];
+  const categories = ["ALL", "EDUCATION", "COMPETITION", "LEADERSHIP", "TEACHING", "DIPLOMACY"];
 
   const filteredItems =
     activeCategory === "ALL"
@@ -23,6 +23,8 @@ export default function JourneyPage() {
         return <Award className="w-4 h-4 text-universe-accent" />;
       case "LEADERSHIP":
         return <ShieldCheck className="w-4 h-4 text-universe-secondary" />;
+      case "TEACHING":
+        return <BookOpen className="w-4 h-4 text-amber-400" />;
       case "DIPLOMACY":
         return <Flag className="w-4 h-4 text-sky-400" />;
       default:
@@ -51,7 +53,7 @@ export default function JourneyPage() {
         <header className="border-b border-universe-border/60 pb-12 space-y-6">
           <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
             <Sparkles className="w-3.5 h-3.5" />
-            <span>TIMELINE ARCHIVE // CHRONOLOGY & EVOLUTION</span>
+            <span>TIMELINE ARCHIVE // FACTUAL CHRONOLOGY</span>
           </div>
 
           <h1 className="font-display font-black text-4xl sm:text-6xl lg:text-8xl uppercase tracking-tightest leading-[0.92]">
@@ -63,7 +65,7 @@ export default function JourneyPage() {
 
           <div className="flex flex-col md:flex-row md:items-end justify-between gap-6 pt-4 font-mono text-xs text-universe-muted">
             <p className="max-w-xl text-universe-text/80 text-sm leading-relaxed">
-              True development is non-linear. Milestones across premier management academics, quantitative analysis, military cadet discipline, school governance, and national case competition finals.
+              A factual timeline tracking dual university studies, case competition finals at IIM Bangalore, student governance, cadet service, and independent teaching.
             </p>
 
             {/* Filter Pills */}
@@ -106,24 +108,26 @@ export default function JourneyPage() {
               />
 
               {/* Node Header */}
-              <div className="flex flex-wrap items-center justify-between gap-3 mb-3 font-mono text-xs">
+              <div className="flex flex-wrap items-center justify-between gap-3 mb-4">
                 <div className="flex items-center gap-3">
                   <span className="p-1.5 rounded-lg bg-universe-bg border border-universe-border">
                     {getCategoryIcon(item.category)}
                   </span>
-                  <span className="font-bold uppercase tracking-wider text-universe-accent">
+                  <span className="font-mono text-xs font-bold uppercase tracking-wider text-universe-accent">
                     {item.category}
                   </span>
                   <span className="text-universe-border">•</span>
-                  <span className="text-universe-muted">{item.period}</span>
+                  <span className="font-mono text-xs text-universe-muted">
+                    {item.period}
+                  </span>
                 </div>
 
-                <span className="text-universe-muted px-2.5 py-1 rounded bg-universe-bg border border-universe-border/50">
+                <div className="font-mono text-xs text-universe-muted px-2.5 py-1 rounded bg-universe-bg border border-universe-border/50">
                   {item.institutionOrContext}
-                </span>
+                </div>
               </div>
 
-              {/* Node Title & Narrative */}
+              {/* Title & Narrative */}
               <h2 className="font-display font-bold text-2xl sm:text-3xl text-universe-text tracking-tight uppercase group-hover:text-universe-accent transition-colors">
                 {item.title}
               </h2>
@@ -133,12 +137,12 @@ export default function JourneyPage() {
               </p>
 
               {/* Tags & Action Link */}
-              <div className="mt-6 pt-4 border-t border-universe-border/40 flex flex-wrap items-center justify-between gap-4 font-mono text-xs">
+              <div className="mt-5 pt-4 border-t border-universe-border/40 flex flex-wrap items-center justify-between gap-4">
                 <div className="flex flex-wrap gap-2">
                   {item.tags.map((tag, tIdx) => (
                     <span
                       key={tIdx}
-                      className="px-2.5 py-0.5 rounded-full border border-universe-border bg-universe-bg text-[11px] text-universe-muted"
+                      className="px-2.5 py-0.5 rounded-full border border-universe-border bg-universe-bg/60 text-[11px] font-mono text-universe-muted"
                     >
                       #{tag}
                     </span>
@@ -148,9 +152,9 @@ export default function JourneyPage() {
                 {item.category === "COMPETITION" && (
                   <Link
                     href="/work/mitti-compass"
-                    className="inline-flex items-center gap-1.5 text-universe-accent hover:underline font-semibold"
+                    className="inline-flex items-center gap-1.5 font-mono text-xs text-universe-accent hover:underline"
                   >
-                    <span>EXAMINE MITTI COMPASS STRATEGY</span>
+                    <span>STUDY MITTI COMPASS</span>
                     <ArrowUpRight className="w-3.5 h-3.5" />
                   </Link>
                 )}
@@ -159,29 +163,13 @@ export default function JourneyPage() {
           ))}
         </div>
 
-        {/* Future Horizon: Unfinished Story */}
-        <section className="p-8 sm:p-12 rounded-3xl border border-universe-border bg-universe-surface/70 space-y-4">
-          <div className="flex items-center gap-2 font-mono text-xs text-universe-accent uppercase tracking-widest">
-            <Compass className="w-4 h-4" />
-            <span>THE UNFINISHED HORIZON // FORWARD TRAJECTORY</span>
-          </div>
-
-          <h3 className="font-display font-bold text-2xl sm:text-3xl uppercase tracking-tight">
-            &ldquo;I don&apos;t have a finished story. I&apos;m busy building one.&rdquo;
-          </h3>
-
-          <p className="font-sans text-sm sm:text-base text-universe-text/80 leading-relaxed max-w-3xl">
-            The next phases involve synthesizing quantitative analysis with venture creation—exploring how algorithmic efficiency can optimize high-friction offline supply chains, social inclusion business models, and strategic enterprise growth.
-          </p>
-        </section>
-
         {/* Footer Navigation */}
         <footer className="pt-12 border-t border-universe-border/60 flex items-center justify-between font-mono text-xs">
           <Link href="/about" className="hover:text-universe-accent transition-colors flex items-center gap-1">
             <span>← 02 THE PERSON</span>
           </Link>
           <Link href="/work" className="hover:text-universe-accent transition-colors flex items-center gap-1">
-            <span>04 THE WORK →</span>
+            <span>04 SELECTED WORK →</span>
           </Link>
         </footer>
       </div>

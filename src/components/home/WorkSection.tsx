@@ -34,7 +34,10 @@ export function WorkSection() {
         </div>
 
         {/* Featured Case Study: MITTI COMPASS */}
-        <div className="relative rounded-3xl border border-universe-accent/40 bg-universe-surface/80 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-[0_0_60px_rgba(216,255,62,0.06)]">
+        <div
+          data-cursor="view"
+          className="relative rounded-3xl border border-universe-accent/40 bg-universe-surface/80 p-8 sm:p-12 lg:p-16 overflow-hidden shadow-[0_0_60px_rgba(216,255,62,0.06)]"
+        >
           
           {/* Accent Ambient Glow */}
           <div className="absolute top-0 right-0 w-96 h-96 bg-universe-accent/10 rounded-full blur-[100px] pointer-events-none" />

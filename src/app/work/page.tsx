@@ -45,6 +45,7 @@ export default function WorkPage() {
           {CASE_STUDIES.map((project) => (
             <div
               key={project.id}
+              data-cursor="view"
               className={`rounded-3xl border p-8 sm:p-12 relative overflow-hidden transition-all duration-300 ${
                 project.featured
                   ? "bg-universe-surface/90 border-universe-accent/40 shadow-[0_0_60px_rgba(216,255,62,0.06)]"

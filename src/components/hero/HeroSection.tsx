@@ -81,7 +81,10 @@ export function HeroSection() {
             <div className="absolute w-72 h-72 sm:w-96 sm:h-96 rounded-full bg-universe-accent/10 blur-[90px] pointer-events-none" />
             <div className="absolute w-60 h-60 rounded-full bg-universe-secondary/10 blur-[80px] pointer-events-none translate-y-12" />
 
-            <div className="w-full relative z-10 cursor-grab active:cursor-grabbing overflow-visible">
+            <div
+              data-cursor="3d"
+              className="w-full relative z-10 cursor-grab active:cursor-grabbing overflow-visible"
+            >
               <SculptureCanvas />
             </div>
 

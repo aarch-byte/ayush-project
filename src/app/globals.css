@@ -66,6 +66,17 @@ body {
   outline-offset: 3px;
 }
 
+/* Custom Cursor Rules (Active strictly on devices with precise mouse pointer) */
+@media (pointer: fine) {
+  body.custom-cursor-active,
+  body.custom-cursor-active a,
+  body.custom-cursor-active button,
+  body.custom-cursor-active [role="button"],
+  body.custom-cursor-active canvas {
+    cursor: none !important;
+  }
+}
+
 /* Reduced Motion preferences */
 @media (prefers-reduced-motion: reduce) {
   *, ::before, ::after {

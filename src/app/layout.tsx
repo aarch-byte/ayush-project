@@ -3,6 +3,7 @@ import { Space_Grotesk, Instrument_Serif, Inter, IBM_Plex_Mono } from "next/font
 import "./globals.css";
 import { Navbar } from "@/components/navigation/Navbar";
 import { Footer } from "@/components/layout/Footer";
+import { CustomCursor } from "@/components/layout/CustomCursor";
 
 const spaceGrotesk = Space_Grotesk({
   subsets: ["latin"],
@@ -78,6 +79,7 @@ export default function RootLayout({
       className={`${spaceGrotesk.variable} ${instrumentSerif.variable} ${inter.variable} ${ibmPlexMono.variable}`}
     >
       <body className="bg-universe-bg text-universe-text font-sans antialiased selection:bg-universe-accent selection:text-universe-bg flex flex-col min-h-screen">
+        <CustomCursor />
         <a
           href="#main-content"
           className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-50 px-4 py-2 bg-universe-accent text-universe-bg font-mono text-xs uppercase font-bold"

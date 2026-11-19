@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #101010;
+  --foreground: #F2EFE7;
+  --accent: #D8FF3E;
+  --secondary: #FF674A;
+  --muted: #77766F;
+  --surface: #181818;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background-color: #101010;
+  color: #F2EFE7;
+  scroll-behavior: smooth;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  background-color: #101010;
+  color: #F2EFE7;
+  overflow-x: hidden;
+  min-height: 100vh;
+}
+
+/* Custom Text Selection */
+::selection {
+  background: #D8FF3E;
+  color: #101010;
+}
+
+::-moz-selection {
+  background: #D8FF3E;
+  color: #101010;
+}
+
+/* Minimal Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #101010;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #282828;
+  border-radius: 2px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #D8FF3E;
+}
+
+/* Accessibility Focus Outline */
+:focus-visible {
+  outline: 2px solid #D8FF3E;
+  outline-offset: 3px;
+}
+
+/* Reduced Motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *, ::before, ::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Subtle Grid Background Utilities */
+.universe-grid {
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+}
+
+.noise-overlay {
+  background-image: radial-gradient(rgba(216, 255, 62, 0.04) 1px, transparent 0);
+  background-size: 24px 24px;
+}
